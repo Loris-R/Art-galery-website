@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  
+  get "art-fair", to: "pages#art_fair"
+  get "design", to: "pages#design"
+  
+  resources :partners, only: %i(index new edit update create destroy)
+  resources :exhibitors, only: %i(new edit update create destroy)
 end
