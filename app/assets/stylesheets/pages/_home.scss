@@ -1,1 +1,40 @@
-// Specific CSS for your home-page
+#bienvenue-svg {
+  position: relative;
+  height: 100%;
+  width: 8vh;
+  z-index: 2;
+}
+
+#intro {
+  border-bottom: black;
+  text-align: center;
+}
+
+#letter-b-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  perspective: 1000px;
+  top: 14vh;
+  left: 0;
+}
+
+#letter-b {
+  width: 27rem;
+}
+
+#letter-b.y-axis {
+  animation: y-axis-animation 5s infinite linear;
+}
+
+@keyframes y-axis-animation {
+  from {
+    transform: rotateY(180deg)
+  }
+
+  to {
+    transform: rotateY(-180deg)
+  }
+}
