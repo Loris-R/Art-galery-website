@@ -1,1 +1,8 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Bienvenue Art Galery
+
+A showcase website for an art galery in Paris, France
+
+## Authors
+
+- [@Loris-R](https://github.com/Loris-R)
+- [@rikufonseca](https://github.com/rikufonseca)
