@@ -8,6 +8,8 @@
 #intro {
   border-bottom: black;
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 #letter-b-wrapper {
@@ -17,7 +19,7 @@
   width: 100%;
   z-index: 1;
   perspective: 1000px;
-  top: 14vh;
+  top: 24vh;
   left: 0;
 }
 

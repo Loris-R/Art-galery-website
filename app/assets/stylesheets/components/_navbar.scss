@@ -1,12 +1,43 @@
-.navbar-lewagon {
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+}
+
+ul {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  margin: 0;
+  padding: 3px 17px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+a:link {
+  text-decoration: none;
+  color: black;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav {
+  border-bottom: 1px solid black;
+}
+
+.nav-one {
+  border-top: 1px solid black;
 }
