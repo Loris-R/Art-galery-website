@@ -1,0 +1,9 @@
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 6px 17px;
+  position: sticky;
+  bottom: 0;
+}
