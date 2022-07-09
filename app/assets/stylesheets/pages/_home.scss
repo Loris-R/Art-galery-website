@@ -1,3 +1,8 @@
+#main-container {
+  overflow-y: visible;
+  position: relative;
+}
+
 #bienvenue-svg {
   position: relative;
   height: 100%;
@@ -29,6 +34,8 @@
 
 .letter-b {
   width: 2.25vw;
+  position: absolute;
+  pointer-events: none;
 }
 
 #letter-b.y-axis {
@@ -43,4 +50,37 @@
   to {
     transform: rotateY(-180deg)
   }
+}
+
+#animation {
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+
+.all_text {
+  text-transform: uppercase;
+  font-size: medium;
+  letter-spacing: 1px;
+  padding: 6%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fill_b {
+  fill: #454040f5;
+}
+
+#email_art {
+  text-decoration: underline;
+}
+
+.section_two {
+  margin-bottom: 4vw;
 }

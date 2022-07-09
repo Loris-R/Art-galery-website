@@ -14,22 +14,25 @@ ul {
   padding: 3px 17px;
 }
 
-a:link {
+a:link, .link:link {
   text-decoration: none;
   color: black;
 }
 
-a:visited {
+a:visited,
+.link:visited {
   text-decoration: none;
   color: black;
 }
 
-a:hover {
+a:hover,
+.link:hover {
   text-decoration: none;
   color: black;
 }
 
-a:active {
+a:active,
+.link:active {
   text-decoration: none;
   color: black;
 }
