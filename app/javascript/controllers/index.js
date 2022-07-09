@@ -8,5 +8,5 @@ import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 
-import NavbarController from "./navbar_controller"
-application.register("navbar", NavbarController)
+import HomeController from "./navbar_controller"
+application.register("home", HomeController)
