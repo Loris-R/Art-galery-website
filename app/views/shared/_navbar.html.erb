@@ -1,15 +1,17 @@
 <div id="header">
   <nav class="main-nav nav-one">
     <ul>
-      <li><a href="https://bienvenue.art#about">About</a></li>
+      <li><%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %></li>
   	  <li><a href="https://bienvenue.art/bienvenue-art-fair/">Art Fair</a></li>
-  	  <li><a href="https://bienvenue.art#about">Design</a></li>
-      <li><a href="#contact">Contact</a></li>
+  	  <li><a href="https://bienvenue.art#about">Design</a>
+      </li>
+      <li><%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
+      </li>
     </ul>
   </nav>
   <nav class="main-nav">
     <ul style="display:grid; justify-content:center;">
-      <li><a href="#partners">Partners</a></li>
+      <li><%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %></li>
     </ul>
   </nav>
 </div>
