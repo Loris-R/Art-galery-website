@@ -7,6 +7,15 @@ Exhibitor.destroy_all if Rails.env.development?
 Category.destroy_all if Rails.env.development?
 puts "destroyed datas if development environment"
 
+#create users
+User.create!(
+  email: "loris.reynaud@gmail.com", password: "azerty", admin: true
+)
+User.create!(
+  email: "fonsecarika@gmail.com", password: "123456789", admin: true
+)
+puts "Lolo & Rika created !"
+
 #create Partner
 
 Partner.create!(
