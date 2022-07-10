@@ -77,10 +77,25 @@
   fill: #454040f5;
 }
 
-#email_art {
+#email_art, #email_art_two {
   text-decoration: underline;
 }
 
 .section_two {
   margin-bottom: 4vw;
+}
+
+.logos {
+  width: 4vw;
+}
+
+.logos_lign {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.insta {
+  width: 3.2vw;
+  margin-top: 6px;
 }
