@@ -217,35 +217,28 @@
     </section>
   </main>
   <section id="contact_link" class="all_text">
-    <div style="min-height: calc(100vh - 56px);">
-		  <p> <a href="mailto:info@bienvenue.art" target="_blank"><img src="http://bienvenue.art/wp-content/uploads/2019/06/mail.png" width="170" style="padding:50px"></a>
-			<a href="http://instagram.com/bienvenue.art" target="_blank"><img src="http://bienvenue.art/wp-content/uploads/2019/06/ig-1.png" width="160" style="padding:50px"></a>
-			</p>
-		  <div class="font-size-large">
-        <p style="text-align: center;">
+    <div style="transform: skewY(5.08047e-251deg);">
+      <div class="logos_lign">
+		    <p><%= link_to "http://instagram.com/bienvenue.art"  do %>
+            <%= image_tag "instagram-logo.png", :class => "logos insta" %>
+           <% end %>
+		  	</p>
+        <p><%= mail_to "info@bienvenue.art" do %>
+            <%= image_tag "email.png", :class => "logos" %>
+           <% end %>
+		  	</p>
+      </div>
+		  <div>
 			  BIENVENUE – HOTEL LA LOUISIANE<br>
-			   <a href="https://goo.gl/maps/qfAv8fByttK14qL66" target="_blank">60 RUE DE SEINE 75006 – PARIS, FRANCE </a> <br>+33 01 43 70 03 01 – <a href="mailto:info@bienvenue.art"> info@bienvenue.art</a>
+			     <a href="https://www.google.com/maps/place/Xavier+Blanchot+-+Hotel+La+Louisiane/@48.8535469,2.3346276,17z/data=!3m1!4b1!4m8!3m7!1s0x47e671d919441fd3:0x1bbc37ab01a10069!5m2!4m1!1i2!8m2!3d48.8535469!4d2.3368163" target="_blank">60 RUE DE SEINE 75006 – PARIS, FRANCE </a> <br>
+           <a href="tel:+33 01 43 70 03 01"> +33 01 43 70 03 – </a>
+           <a href="mailto:info@bienvenue.art" id="email_art_two"> info@bienvenue.art</a>
         </p>
       </div>
     </div>
   </section>
   <section id="scripts">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="https://bienvenue.art/wp-content/themes/bienvenue/dist/static/vendor/jquery-3.1.1.min.js"><\/script>')</script>
-    <script type="text/javascript" id="javascript-main-js-extra">
-/* <![CDATA[ */
-    var WP = {"siteUrl":"https:\/\/bienvenue.art","themeUrl":"https:\/\/bienvenue.art\/wp-content\/themes\/bienvenue","isAdmin":"0","qtx_lang":"en","mailchimp":"https:\/\/lilyrobert.us12.list-manage.com\/subscribe\/post?u=2ac88ea8f84ac22315fd57d6e&id=0cc36c4c12"};
-    /* ]]> */
-   </script>
    <script type="text/javascript" src="https://bienvenue.art/wp-content/themes/bienvenue/dist/js/main.js?v=1657211939&amp;ver=6.0" id="javascript-main-js"></script>
   </section>
-  <script type="application/ld+json">
-   {
-  "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "https://bienvenue.art",
-"sameAs" : [
-"https://instagram.com/instagram.com/bienvenue.art",]
-  }
-  </script>
 </section>
