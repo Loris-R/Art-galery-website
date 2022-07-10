@@ -1,17 +1,27 @@
-<div id="header">
+<div id="header" data-controller="navbar">
   <nav class="main-nav nav-one">
     <ul>
-      <li><%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %></li>
-  	  <li><a href="https://bienvenue.art/bienvenue-art-fair/">Art Fair</a></li>
-  	  <li><a href="https://bienvenue.art#about">Design</a>
+      <li data-navbar-target="back">
+        <% unless current_page?(root_path) %>
+          <%= link_to "< BACK", :back , :class => 'go-back' %>
+        <% end %>
       </li>
-      <li><%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
+      <li data-navbar-target="about">
+        <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
+      </li>
+  	  <li><%= link_to 'Art Fair', art_fair_path %>
+      </li>
+  	  <li data-navbar-target="design">
+        <a href="https://bienvenue.art#about">Design</a>
+      </li>
+      <li data-navbar-target="contact">
+        <%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
       </li>
     </ul>
   </nav>
   <nav class="main-nav">
     <ul style="display:grid; justify-content:center;">
-      <li><%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %></li>
+      <li data-navbar-target="partners"><%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %></li>
     </ul>
   </nav>
 </div>
