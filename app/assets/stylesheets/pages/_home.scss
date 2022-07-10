@@ -12,20 +12,26 @@
 
 #intro {
   border-bottom: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   height: 100vh;
   width: 98vw;
 }
 
+.together {
+   position: relative;
+}
+
 #letter-b-wrapper {
-  display: flex;
-  justify-content: center;
-  position: absolute;
   width: 100%;
   z-index: 1;
   perspective: 1000px;
-  top: 24vh;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #letter-b {
