@@ -44,3 +44,8 @@ a:active,
 .nav-one {
   border-top: 1px solid black;
 }
+
+#header {
+  position: sticky;
+  top: 0px;
+}
