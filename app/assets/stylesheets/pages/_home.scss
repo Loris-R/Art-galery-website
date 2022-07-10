@@ -61,9 +61,8 @@
 
 .all_text {
   text-transform: uppercase;
-  font-size: medium;
+  font-size: 15px;
   letter-spacing: 1px;
-  padding: 6%;
   text-align: center;
   border-bottom: 1px solid black;
   height: 100vh;
@@ -71,6 +70,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 6%;
+}
+
+#about_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  p {
+    margin-bottom: 10px;
+  }
 }
 
 .fill_b {
@@ -80,6 +89,13 @@
 #email_art, #email_art_two {
   text-decoration: underline;
 }
+
+// .section_one {
+//   margin: 2.5vh 5vh 0 5vh;
+// }
+// .section_two_about {
+//   margin: 0 5vh 0 5vh;
+// }
 
 .section_two {
   margin-bottom: 4vw;
@@ -101,7 +117,11 @@
 }
 
 .margin-top_center_text {
-  margin-top: 9.8vh;
+  margin-top: 4.8vh;
+}
+
+.margin-top_center_text_partner {
+  margin-top: 13.8vh;
 }
 
 .partner_display {
