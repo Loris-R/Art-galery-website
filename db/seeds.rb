@@ -12,7 +12,7 @@ User.create!(
   email: "loris.reynaud@gmail.com", password: "azerty", admin: true
 )
 User.create!(
-  email: "fonsecarika@gmail.com", password: "123456789", admin: true
+  email: "fonsecarika@gmail.com", password: "1234567890", admin: true
 )
 puts "Lolo & Rika created !"
 
