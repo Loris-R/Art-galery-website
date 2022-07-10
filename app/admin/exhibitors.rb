@@ -32,6 +32,9 @@ ActiveAdmin.register Exhibitor do
     f.inputs "categories" do
       f.input :category_ids, as: :check_boxes, collection: Category.all
     end
+    f.inputs "Ajoutez des photos" do
+      f.input :photos, as: :file, input_html: { multiple: true }
+    end
     f.actions
   end
   
