@@ -9,7 +9,6 @@ export default class extends Controller {
     const contact = this.contactTarget
     const partners = this.partnersTarget
 
-
     if (window.location.pathname == "/" ) {
       back.classList.add("display_back");
     }

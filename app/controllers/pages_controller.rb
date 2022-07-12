@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home, :art_fair, :art_fair_programm, :design, :design_programm]
 
   def home
     @partner = Partner.all.last
