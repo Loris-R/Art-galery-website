@@ -14,6 +14,10 @@ ul {
   padding: 3px 17px;
 }
 
+.navbar_down {
+  justify-content: space-around;
+}
+
 a:link, .link:link {
   text-decoration: none;
   color: black;
@@ -49,4 +53,12 @@ a:active,
   position: sticky;
   top: 0px;
   z-index: 15;
+}
+
+.go-back {
+  font-size: 13px;
+}
+
+.display_back {
+  display: none;
 }
