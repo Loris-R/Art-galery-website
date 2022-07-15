@@ -9,13 +9,17 @@
       <li data-navbar-target="about">
         <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
       </li>
-  	  <li>
+      <li data-navbar-target="liartfairone">
+      </li>
+  	  <li data-navbar-target="artfair">
         <%= link_to 'Art Fair', art_fair_path %>
       </li>
-      <li>
+      <li data-navbar-target="liartfair">
       </li>
   	  <li data-navbar-target="design">
-        <a href="https://bienvenue.art#about">Design</a>
+        <%= link_to 'Design', design_path %>
+      </li>
+      <li data-navbar-target="lidesign">
       </li>
       <li data-navbar-target="contact">
         <%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
@@ -31,11 +35,17 @@
     <% unless current_page?(root_path) %>
       <ul class="navbar_down">
           <li>
-            <%= link_to "EXHIBITOR", "/exhibitors", class:"link" %>
+            <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
           </li>
-          <li>
-            <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
-          </li>
+          <% if current_page?("/art-fair") %>
+            <li>
+              <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
+            </li>
+          <% end %>
       </ul>
     <% end %>
   </nav>
