@@ -1,9 +1,9 @@
-<div id="header" data-controller="navbar">
+<div id="header" class="nav_height" data-controller="navbar">
   <nav class="main-nav nav-one">
     <ul>
       <li data-navbar-target="back">
         <% unless current_page?(root_path) %>
-          <%= link_to "< BACK", :back , :class => 'go-back' %>
+          <%= link_to "< BACK", :back %>
         <% end %>
       </li>
       <li data-navbar-target="about">
@@ -23,18 +23,20 @@
     </ul>
   </nav>
   <nav class="main-nav">
-    <ul style="display:grid; justify-content:center;">
-      <li data-navbar-target="partners"><%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %></li>
-    </ul>
-    <ul class="navbar_down">
-      <% unless current_page?(root_path) %>
-        <li>
-          <%= link_to "EXHIBITOR", "/exhibitors", class:"link" %>
-        </li>
-        <li>
-          <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
-        </li>
-      <% end %>
-    </ul>
+    <% if current_page?(root_path) %>
+      <ul style="display:grid; justify-content:center;">
+        <li data-navbar-target="partners"><%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %></li>
+      </ul>
+    <% end %>
+    <% unless current_page?(root_path) %>
+      <ul class="navbar_down">
+          <li>
+            <%= link_to "EXHIBITOR", "/exhibitors", class:"link" %>
+          </li>
+          <li>
+            <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
+          </li>
+      </ul>
+    <% end %>
   </nav>
 </div>
