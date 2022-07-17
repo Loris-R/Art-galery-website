@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "design", to: "pages#design"
   get "design-programm", to: "pages#design_programm"
   get "design-exhibitors", to: "pages#design_exhibitors"
+  get "registration", to: "pages#registration"
 
   resources :partners, only: %i(index new edit update create destroy)
   resources :exhibitors, only: %i(new edit update create destroy)
