@@ -6,18 +6,18 @@ class PagesController < ApplicationController
   end
 
   def art_fair
-    @about = Category.find_by(name: "Art Fair").text
+    @art_fair = ArtFair.all.last
   end
 
   def art_fair_programm
-    @programm = Category.find_by(name: "Art Fair").programm
+    @art_fair = ArtFair.all.last
   end
 
   def design
-    @about = Category.find_by(name: "Design").text
+    @design = Design.all.last
   end
 
   def design_programm
-    @programm = Category.find_by(name: "Design").programm
+    @design = Design.all.last
   end
 end
