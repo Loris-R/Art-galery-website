@@ -39,14 +39,17 @@
   <% unless current_page?(root_path) %>
     <nav class="main-nav">
       <ul class="navbar_down">
-        <li>
-          <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
-        </li>
         <% if current_page?("/art-fair") %>
+          <li>
+            <%= link_to "EXHIBITORS", art_fair_exhibitors_path, class:"link" %>
+          </li>
           <li>
             <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
           </li>
         <% else %>
+          <li>
+            <%= link_to "EXHIBITORS", design_exhibitors_path, class:"link" %>
+          </li>
           <li>
             <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
           </li>
@@ -75,17 +78,23 @@
   <% unless current_page?(root_path) %>
     <ul class="navbar_down">
       <li>
-        <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
+        <%= link_to "EXHIBITORS", design_exhibitors_path, class:"link" %>
       </li>
       <% if current_page?("/art-fair") %>
-        <li>
-          <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
-        </li>
-      <% end %>
+          <li>
+            <%= link_to "EXHIBITORS", art_fair_exhibitors_path, class:"link" %>
+          </li>
+          <li>
+            <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "EXHIBITORS", design_exhibitors_path, class:"link" %>
+          </li>
+          <li>
+            <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
+          </li>
+        <% end %>
     </ul>
   <% end %>
   </ul>
