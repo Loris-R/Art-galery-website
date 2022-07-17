@@ -148,3 +148,14 @@ body {
 .img_partner_juliette {
   margin-bottom: 15vh;
 }
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+
+  #letter-b {
+      width: 19rem;
+    }
+
+  .letter-b {
+    width: 5.25vw;
+  }
+}

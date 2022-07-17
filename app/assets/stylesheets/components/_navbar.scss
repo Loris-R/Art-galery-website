@@ -46,7 +46,7 @@ a:active,
   background-color: #f4f4f4;
 }
 
-#header {
+.header {
   position: sticky;
   top: 0px;
   z-index: 15;
@@ -62,4 +62,42 @@ a:active,
 
 .nav_height {
   height: 6vw;
+}
+
+#nav_computer {
+  display: block;
+}
+
+#nav_tel {
+  display: none;
+}
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+  #nav_computer {
+    display: none;
+  }
+
+  #nav_tel {
+    display: block;
+  }
+
+  #rescale {
+    width: 21px;
+    position: relative;
+    left: 48%;
+  }
+
+  li, .column {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .main-nav {
+    text-align: center;
+  }
 }

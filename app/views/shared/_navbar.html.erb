@@ -1,4 +1,4 @@
-<div id="header" class="nav_height" data-controller="navbar">
+<div class="header" class="nav_height" data-controller="navbar" id="nav_computer">
   <nav class="main-nav">
     <ul>
       <li data-navbar-target="back">
@@ -54,4 +54,39 @@
       </ul>
     </nav>
   <% end %>
+</div>
+<div class="header" id="nav_tel">
+    <ul class="navbar-nav main-nav">
+      <li>
+        <svg  id="rescale" class="dropdown-toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+          <path d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" fill="black">
+          </path>
+        </svg>
+        <div class="column">
+          <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
+          <%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %>
+          <%= link_to 'Art Fair', art_fair_path, class:"link"  %>
+          <%= link_to 'Design', design_path, class:"link"  %>
+          <%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
+          <%= link_to "REGISTRATION", "/registration", class:"link" %>
+        </div>
+      </li>
+    </ul>
+  <% unless current_page?(root_path) %>
+    <ul class="navbar_down">
+      <li>
+        <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
+      </li>
+      <% if current_page?("/art-fair") %>
+        <li>
+          <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  </ul>
 </div>
