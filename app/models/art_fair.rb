@@ -1,0 +1,2 @@
+class ArtFair < ApplicationRecord
+end

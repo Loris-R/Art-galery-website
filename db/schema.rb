@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_17_142246) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_17_143612) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,6 +56,42 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_17_142246) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "art_fair_exhibitors", force: :cascade do |t|
+    t.bigint "art_fair_id", null: false
+    t.string "artist_name"
+    t.text "description"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["art_fair_id"], name: "index_art_fair_exhibitors_on_art_fair_id"
+  end
+
+  create_table "art_fairs", force: :cascade do |t|
+    t.text "description"
+    t.text "programm"
+    t.text "coordinates"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "design_exhibitors", force: :cascade do |t|
+    t.bigint "design_id", null: false
+    t.string "artist_name"
+    t.text "description"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["design_id"], name: "index_design_exhibitors_on_design_id"
+  end
+
+  create_table "designs", force: :cascade do |t|
+    t.text "description"
+    t.text "programm"
+    t.text "coordinates"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "partners", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", null: false
@@ -77,4 +113,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_17_142246) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "art_fair_exhibitors", "art_fairs"
+  add_foreign_key "design_exhibitors", "designs"
 end
