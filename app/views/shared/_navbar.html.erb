@@ -1,5 +1,5 @@
-<div id="header" class="nav_height" data-controller="navbar">
-  <nav class="main-nav nav-one">
+<div class="header" class="nav_height" data-controller="navbar" id="nav_computer">
+  <nav class="main-nav">
     <ul>
       <li data-navbar-target="back">
         <% unless current_page?(root_path) %>
@@ -9,44 +9,84 @@
       <li data-navbar-target="about">
         <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
       </li>
-      <li data-navbar-target="liartfairone">
-      </li>
+      <% if current_page?(root_path) %>
+        <li data-navbar-target="partners">
+          <%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %>
+        </li>
+      <% end %>
   	  <li data-navbar-target="artfair">
         <%= link_to 'Art Fair', art_fair_path %>
       </li>
-      <li data-navbar-target="liartfair">
-      </li>
+      <% if current_page?("/art-fair") || current_page?("/art-fair-programm") %>
+        <li>
+        </li>
+      <% end %>
   	  <li data-navbar-target="design">
         <%= link_to 'Design', design_path %>
       </li>
-      <li data-navbar-target="lidesign">
-      </li>
+      <% if current_page?("/design") || current_page?("/design-programm") %>
+        <li>
+        </li>
+      <% end %>
       <li data-navbar-target="contact">
         <%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
       </li>
+      <li  data-navbar-target="registration">
+        <%= link_to "REGISTRATION", "/registration", class:"link" %>
+      </li>
     </ul>
   </nav>
-  <nav class="main-nav">
-    <% if current_page?(root_path) %>
-      <ul style="display:grid; justify-content:center;">
-        <li data-navbar-target="partners"><%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %></li>
-      </ul>
-    <% end %>
-    <% unless current_page?(root_path) %>
+  <% unless current_page?(root_path) %>
+    <nav class="main-nav">
       <ul class="navbar_down">
+        <li>
+          <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
+        </li>
+        <% if current_page?("/art-fair") %>
           <li>
-            <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
+            <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
           </li>
-          <% if current_page?("/art-fair") %>
-            <li>
-              <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
-            </li>
-          <% else %>
-            <li>
-              <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
-            </li>
-          <% end %>
+        <% else %>
+          <li>
+            <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
+          </li>
+        <% end %>
       </ul>
-    <% end %>
-  </nav>
+    </nav>
+  <% end %>
+</div>
+<div class="header" id="nav_tel">
+    <ul class="navbar-nav main-nav">
+      <li>
+        <svg  id="rescale" class="dropdown-toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+          <path d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" fill="black">
+          </path>
+        </svg>
+        <div class="column">
+          <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
+          <%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %>
+          <%= link_to 'Art Fair', art_fair_path, class:"link"  %>
+          <%= link_to 'Design', design_path, class:"link"  %>
+          <%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
+          <%= link_to "REGISTRATION", "/registration", class:"link" %>
+        </div>
+      </li>
+    </ul>
+  <% unless current_page?(root_path) %>
+    <ul class="navbar_down">
+      <li>
+        <%= link_to "EXHIBITORS", "/art-fair-exhibitors", class:"link" %>
+      </li>
+      <% if current_page?("/art-fair") %>
+        <li>
+          <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "PROGRAMM", "/design-programm", class:"link" %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  </ul>
 </div>

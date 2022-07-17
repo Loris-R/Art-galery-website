@@ -83,6 +83,10 @@ body {
   padding: 6%;
 }
 
+.border_contact {
+  border-bottom: none;
+}
+
 #about_link {
   display: flex;
   flex-direction: column;
@@ -126,14 +130,6 @@ body {
   margin-top: 6px;
 }
 
-.margin-top_center_text {
-  margin-top: 4.8vh;
-}
-
-.margin-top_center_text_partner {
-  margin-top: 13.8vh;
-}
-
 .partner_display {
   display: flex;
   flex-direction: row;
@@ -151,4 +147,15 @@ body {
 
 .img_partner_juliette {
   margin-bottom: 15vh;
+}
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+
+  #letter-b {
+      width: 19rem;
+    }
+
+  .letter-b {
+    width: 5.25vw;
+  }
 }
