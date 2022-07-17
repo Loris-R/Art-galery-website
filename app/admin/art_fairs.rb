@@ -1,6 +1,14 @@
 ActiveAdmin.register ArtFair do
 
   actions :index, :show, :edit, :update
+
+  index do
+    selectable_column
+    column :description
+    column :programm
+    column :coordinates
+    actions
+  end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
