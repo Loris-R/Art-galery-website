@@ -20,4 +20,10 @@ class PagesController < ApplicationController
   def design_programm
     @design = Design.all.last
   end
+
+  def registration
+    @titles = Registration::TITLES
+    @status = Registration::STATUS
+    @categories = Registration::CATEGORIES
+  end
 end
