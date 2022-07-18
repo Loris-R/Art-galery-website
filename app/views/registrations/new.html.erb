@@ -1,0 +1,33 @@
+<%= form_with model: @registration, method: :post, class: "registration-form" do |reg_form| %>
+  <div class="registration-group">
+    <%= reg_form.label "Select your title" %>
+    <div class="registration-radio">
+      <%= reg_form.collection_radio_buttons :title, @titles, :to_s, :to_s %>
+    </div>
+  </div>
+  <div class="registration-group">
+    <%= reg_form.label "First name" %>
+    <%= reg_form.text_field :first_name %>
+  </div>
+  <div class="registration-group">
+    <%= reg_form.label "Last name" %>
+    <%= reg_form.text_field :last_name %>
+  </div>
+  <div class="registration-group">
+    <%= reg_form.label "Select your status" %>
+    <div class="registration-radio">
+      <%= reg_form.collection_radio_buttons :status, @status, :to_s, :to_s %>
+    </div>
+  </div>
+  <div class="registration-group">
+    <%= reg_form.label "Email" %>
+    <%= reg_form.text_field :email %>
+  </div>
+  <div class="registration-group">
+    <%= reg_form.label "Select your category" %>
+    <div class="registration-radio">
+      <%= reg_form.collection_radio_buttons :category, @categories, :to_s, :to_s %>
+    </div>
+  </div>
+  <%= reg_form.submit "Submit" %>
+<% end %>
