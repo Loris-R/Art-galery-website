@@ -148,12 +148,17 @@ body {
 .img_partner_juliette {
   margin-bottom: 15vh;
 }
-.only_on_tel {
+
+#about_link, #partners_link {
   display: none;
 }
 
-.only_on_computer {
+#about_link_computer, #partner_link_computer {
   display: block;
+}
+
+.only_on_tel {
+  display: none;
 }
 
 @media only screen and (min-width:279px) and (max-width:766px) {
@@ -191,12 +196,12 @@ body {
     margin-top: 0;
   }
 
-    .only_on_tel {
-      display: block;
+    #about_link_computer, #partners_link_computer {
+      display: none;
     }
 
-    .only_on_computer {
-      display: none;
+    #about_link, #partners_link {
+      display: block;
     }
 
     .tel_position {
@@ -208,4 +213,7 @@ body {
       height: 409px;
     }
 
+    .only_on_tel {
+      display: block;
+    }
 }
