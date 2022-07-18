@@ -81,12 +81,6 @@ a:active,
     display: block;
   }
 
-  #rescale {
-    width: 21px;
-    position: relative;
-    left: 48%;
-  }
-
   li, .column {
     display: flex;
     flex-direction: column;
@@ -99,5 +93,25 @@ a:active,
 
   .main-nav {
     text-align: center;
+    border-bottom: none;
   }
+
+  .rotate {
+    transition: transform 0.5s;
+    transform: rotate(90deg);
+  }
+
+  .fa-solid {
+    height: 29px;
+  }
+
+  .slide {
+    clear:both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+  }
+
 }
