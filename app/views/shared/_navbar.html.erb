@@ -1,5 +1,5 @@
-<div data-controller="navbar">
-  <div class="header" class="nav_height" id="nav_computer">
+<div data-controller="navbar" id="header">
+  <div class="nav_height" id="nav_computer">
     <nav class="main-nav">
       <ul>
         <li data-navbar-target="back">
@@ -61,8 +61,10 @@
   </div>
   <div class="header" id="nav_tel">
     <ul class="navbar-nav main-nav">
-      <li>
+      <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
+      </li>
+      <li>
         <div class="column slide" data-navbar-target="aboutdown">
           <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
           <%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %>

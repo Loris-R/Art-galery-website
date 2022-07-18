@@ -178,7 +178,9 @@
       </div>
     </div>
   </div>
-  <main  id="about_link" class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
+  <div id="about_link" class="only_on_tel" style="height: 4px;"></div>
+  <div id="about_link" class="only_on_computer"></div>
+  <main class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
     <section class="all_text">
       <div class="section_one">
         <p>For its second design edition, Bienvenue Design fair will take place at the Hotel La Louisiane, 60 rue de Seine, in the mythical Saint-Germain-des-Prés district, during the Paris Design Week, from September 8 to 11.<br>
@@ -199,8 +201,9 @@
       </div>
     </section>
   </main>
-  <main id="partners_link" class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
-    <section class="all_text">
+  <div id="partners_link" style="height: 208px;"></div>
+  <main class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
+    <section class="all_text tel_position">
       <div class="partner_display">
         <div class="display_photos">
           <% @partner.photos.each do |photo| %>
@@ -213,7 +216,7 @@
       </div>
     </section>
   </main>
-  <section id="contact_link" class="all_text border_contact">
+  <section id="contact_link" class="all_text border_ height_tel">
     <div style="transform: skewY(5.08047e-251deg);">
       <div class="logos_lign">
 		    <p><%= link_to "http://instagram.com/bienvenue.art"  do %>
