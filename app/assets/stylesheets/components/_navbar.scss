@@ -85,7 +85,10 @@ a:active,
   }
 
   .main-nav {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
   }
 
   .rotate {
@@ -94,7 +97,7 @@ a:active,
   }
 
   .fa-solid {
-    height: 29px;
+    height: 21px;
     width: 19px;
   }
 

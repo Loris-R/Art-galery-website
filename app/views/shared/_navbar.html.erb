@@ -76,10 +76,7 @@
       </li>
     </ul>
     <% unless current_page?(root_path) %>
-      <ul class="navbar_down">
-        <li>
-          <%= link_to "EXHIBITORS", design_exhibitors_path, class:"link" %>
-        </li>
+      <ul class="navbar_down down_border_tel">
         <% if current_page?("/art-fair") %>
           <li>
             <%= link_to "EXHIBITORS", art_fair_exhibitors_path, class:"link" %>
