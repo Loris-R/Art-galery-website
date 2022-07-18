@@ -8,3 +8,18 @@
   bottom: 0;
   background-color: #F4F4F4;
 }
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+  #footer {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .smaller {
+    height: 14px;
+  }
+
+
+
+
+}

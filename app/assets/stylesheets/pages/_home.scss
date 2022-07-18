@@ -161,9 +161,30 @@ body {
 
   .all_text {
     height: auto;
+    font-size: 13px;
   }
 
   #about_link {
     border-top: 1px solid black;
+  }
+
+  .partner_display {
+    display: unset;
+  }
+
+  img {
+    width: 100vw;
+  }
+
+  .img_partner_juliette {
+    margin-bottom: 5vh;
+  }
+
+  .logos {
+    width: 12vw;
+  }
+
+  .insta {
+    margin-top: 0;
   }
 }
