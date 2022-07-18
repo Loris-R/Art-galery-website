@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :art_fair_exhibitors, only: %i(index)
   resources :design_exhibitors, only: %i(index)
   resources :partners, only: %i(index new edit update create destroy)
-  resources :registration, only: %i(new create)
+  resources :registrations, only: %i(new create)
 end
