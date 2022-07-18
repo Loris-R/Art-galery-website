@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ExhibitorsControllerTest < ActionDispatch::IntegrationTest
+class ArtFairTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

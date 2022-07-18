@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ExhibitorTest < ActiveSupport::TestCase
+class DesignExhibitorTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
