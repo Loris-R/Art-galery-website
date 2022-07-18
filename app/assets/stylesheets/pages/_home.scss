@@ -148,6 +148,13 @@ body {
 .img_partner_juliette {
   margin-bottom: 15vh;
 }
+.only_on_tel {
+  display: none;
+}
+
+.only_on_computer {
+  display: block;
+}
 
 @media only screen and (min-width:279px) and (max-width:766px) {
 
@@ -162,10 +169,6 @@ body {
   .all_text {
     height: auto;
     font-size: 13px;
-  }
-
-  #about_link {
-    border-top: 1px solid black;
   }
 
   .partner_display {
@@ -187,4 +190,22 @@ body {
   .insta {
     margin-top: 0;
   }
+
+    .only_on_tel {
+      display: block;
+    }
+
+    .only_on_computer {
+      display: none;
+    }
+
+    .tel_position {
+      position: relative;
+      top: -197px;
+    }
+
+    .height_tel {
+      height: 409px;
+    }
+
 }
