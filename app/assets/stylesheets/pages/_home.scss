@@ -149,16 +149,12 @@ body {
   margin-bottom: 15vh;
 }
 
-#about_link, #partners_link {
-  display: none;
-}
-
-#about_link_computer, #partner_link_computer {
-  display: block;
-}
-
 .only_on_tel {
   display: none;
+}
+
+.only_on_comp {
+  display: block;
 }
 
 @media only screen and (min-width:279px) and (max-width:766px) {
@@ -196,24 +192,19 @@ body {
     margin-top: 0;
   }
 
-    #about_link_computer, #partners_link_computer {
-      display: none;
-    }
+  .tel_position {
+    position: relative;
+    bottom: 100vw;
+  }
+  .height_tel {
+    height: 409px;
+  }
 
-    #about_link, #partners_link {
-      display: block;
-    }
+  .only_on_tel {
+    display: block;
+  }
 
-    .tel_position {
-      position: relative;
-      top: -197px;
-    }
-
-    .height_tel {
-      height: 409px;
-    }
-
-    .only_on_tel {
-      display: block;
-    }
+  .only_on_comp {
+    display: none;
+  }
 }
