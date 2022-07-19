@@ -4,8 +4,8 @@ puts "Seeds start"
 User.destroy_all
 Partner.destroy_all
 ArtFairExhibitor.destroy_all
-ArtFair.destroy_all 
-DesignExhibitor.destroy_all 
+ArtFair.destroy_all
+DesignExhibitor.destroy_all
 Design.destroy_all
 puts "destroyed datas if development environment"
 
@@ -49,7 +49,7 @@ puts "Art Fair & Design created"
 d_exhib = DesignExhibitor.new(
   design_id: art_fair.id,
   artist_name: "Galerie Pradier-Jeauneau\r\n Aurélien Jeauneau et Jeremy Pradier Jeauneau",
-  description: "Marché Paul Bert\r\nAllée 6 Stand 93\r\nMobilier\r\nXXe siècle\r\n+33(0)6 50 69 63 89\r\nLa galerie Pradier-Jeauneau présente à la Louisiane La Chambre de l'écrivain nomade.\r\nSans attache, il vit de chambre d’hôtel en chambre d’hôtel à travers le monde, où il\r\ndresse une tente, mi-berbère mi-romaine. Un monde s'y déploie : fauteuils, bureau, et\r\nlit de jour où les souvenirs se mêlent aux promesses.\r\nDu sol au plafond, la tente sera en velours fushia, couleur vibrante et urbaine.\r\nL'installation monumentale vient faire oublier la chambre d'hôtel. A l'image de ce qu'à\r\noffert La Louisiane à ses pensionnaires illustres, notre écrivain nomade est ici chez lui :\r\nun bivouac rempli de son imaginaire pointu, queer et irrévérencieux.\r\nPour cette première participation, Aurélien Jeauneau et Jeremy Pradier-Jeauneau font\r\nappel à leur partenaire Vincent Thévenon de la Maison Thévenon. A eux trois, ils ont\r\ninventé une couleur \"Louisiane\", flamboyante et hors-temps.\r\nAurélien Jeauneau et Jeremy Pradier-Jeauneau défendent les designers français du\r\nXXe. Le binôme s’est rencontré à l’Institut National d’Histoire de l’Art en 2007, et\r\ncontinue ses recherches sur les arts décoratifs de la Reconstruction française à nos\r\njours.\r\nAvec de nombreuses expositions thématiques à son actif et de collaborations\r\nprestigieuses la galerie Pradier-Jeauneau développe une expertise autour d’un mobilier\r\nd’exception, entre collection, décoration, littérature et cinéma.",
+  description: "Marché Paul Bert\r\nAllée 6 Stand 93\r\nMobilier\r\nXXe siècle\r\n+33(0)6 50 69 63 89\r\n\r\nLa galerie Pradier-Jeauneau présente à la Louisiane La Chambre de l'écrivain nomade. Sans attache, il vit de chambre d’hôtel en chambre d’hôtel à travers le monde, où il dresse une tente, mi-berbère mi-romaine. Un monde s'y déploie : fauteuils, bureau, et lit de jour où les souvenirs se mêlent aux promesses. Du sol au plafond, la tente sera en velours fushia, couleur vibrante et urbaine. L'installation monumentale vient faire oublier la chambre d'hôtel. A l'image de ce qu'à\r\noffert La Louisiane à ses pensionnaires illustres, notre écrivain nomade est ici chez lui :\r\nun bivouac rempli de son imaginaire pointu, queer et irrévérencieux. Pour cette première participation, Aurélien Jeauneau et Jeremy Pradier-Jeauneau font appel à leur partenaire Vincent Thévenon de la Maison Thévenon. A eux trois, ils ont inventé une couleur \"Louisiane\", flamboyante et hors-temps.\r\nAurélien Jeauneau et Jeremy Pradier-Jeauneau défendent les designers français du XXe. Le binôme s’est rencontré à l’Institut National d’Histoire de l’Art en 2007, et continue ses recherches sur les arts décoratifs de la Reconstruction française à nos jours.\r\nAvec de nombreuses expositions thématiques à son actif et de collaborations prestigieuses la galerie Pradier-Jeauneau développe une expertise autour d’un mobilier d’exception, entre collection, décoration, littérature et cinéma.",
   url: "pradierjeauneau@gmail.com"
 )
 file1 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIGN_PradierJeauneau-Thevenon_cr%C3%A9dit%20est%20M%C3%A9lodie%20Descours.jpg")
@@ -64,7 +64,7 @@ puts "#{d_exhib.artist_name} Design exhibitors created"
 d_exhib = DesignExhibitor.new(
   design_id: art_fair.id,
   artist_name: "Paf atelier\r\n Pollet Agathe Designer",
-  description: "36 Boulevard de la Bastille, 75012 Paris\r\n+33 (0)6 32 29 24 22 / +\r\n33 (0)9 75 49 46 76\r\n\r\nInstallé à Paris, Paf est un atelier de conception d’architecture et de scénographie.\r\nAnimé par l’expérimentation, la recherche en architecture et l’art, Christopher Dessus,\r\nArchitecte DE, scénographe, commissaire d’exposition et directeur de l’association Pli\r\n(Éditions et Workshop) crée l’atelier en 2017. Ce dernier permet de remettre en\r\nquestion les conditions de la pratique de l’architecture, de la création à la production.\r\nChaque projet signé par l’atelier est une recherche mesurée entre savoir et savoir–faire,\r\nréfexion et création, où l’ensemble de la conception et de la production ne peuvent\r\nêtre envisagés de manière dissociée.",
+  description: "36 Boulevard de la Bastille, 75012 Paris\r\n+33 (0)6 32 29 24 22 / +\r\n33 (0)9 75 49 46 76\r\n\r\nInstallé à Paris, Paf est un atelier de conception d’architecture et de scénographie.\r\nAnimé par l’expérimentation, la recherche en architecture et l’art, Christopher Dessus, Architecte DE, scénographe, commissaire d’exposition et directeur de l’association Pli (Éditions et Workshop) crée l’atelier en 2017. Ce dernier permet de remettre en question les conditions de la pratique de l’architecture, de la création à la production. Chaque projet signé par l’atelier est une recherche mesurée entre savoir et savoir–faire, réfexion et création, où l’ensemble de la conception et de la production ne peuvent être envisagés de manière dissociée.",
   url: "www.pafatelier.com"
 )
 file1 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/paf1.png")
