@@ -8,11 +8,11 @@
           <% end %>
         </li>
         <li data-navbar-target="about">
-          <%= link_to "ABOUT", root_path(anchor:"about_link_computer"), class:"link" %>
+          <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
         </li>
         <% if current_page?(root_path) %>
           <li data-navbar-target="partners">
-            <%= link_to "PARTNERS", root_path(anchor:"partners_link_computer"), class:"link" %>
+            <%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %>
           </li>
         <% end %>
     	  <li data-navbar-target="artfair">
@@ -64,16 +64,28 @@
       <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
       </li>
-      <li>
         <div class="column slide" data-navbar-target="aboutdown">
-          <%= link_to "ABOUT", root_path(anchor:"about_link"), class:"link" %>
-          <%= link_to "PARTNERS", root_path(anchor:"partners_link"), class:"link" %>
-          <%= link_to 'Art Fair', art_fair_path, class:"link"  %>
-          <%= link_to 'Design', design_path, class:"link"  %>
-          <%= link_to "CONTACT", root_path(anchor:"contact_link"), class:"link" %>
-          <%= link_to "REGISTRATION", new_registration_path, class:"link" %>
+          <ul class="list_menu_column">
+            <li data-navbar-target="aboutlink">
+              <a href="./#about_link">ABOUT</a>
+            </li>
+            <li data-navbar-target="partnerslink">
+               <a href="./#partners_link">PARTNERS</a>
+            </li>
+            <li>
+              <%= link_to 'Art Fair', art_fair_path, class:"link"  %>
+            </li>
+            <li>
+              <%= link_to 'Design', design_path, class:"link"  %>
+            </li>
+            <li data-navbar-target="contactlink">
+               <a href="./#contact_link">CONTACT</a>
+            </li>
+            <li>
+              <%= link_to "REGISTRATION", new_registration_path, class:"link" %>
+            </li>
+          </ul>
         </div>
-      </li>
     </ul>
     <% unless current_page?(root_path) %>
       <ul class="navbar_down down_border_tel">

@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["back", "about", "design", "contact", "artfair", "registration", "cross", "aboutdown"]
+  static targets = ["back", "about", "design", "contact", "artfair", "registration", "cross", "aboutdown", "aboutlink", "partnerslink", "contactlink"]
   connect() {
     const back = this.backTarget
     const about = this.aboutTarget
@@ -10,6 +10,9 @@ export default class extends Controller {
     const registration = this.registrationTarget
     const artfair = this.artfairTarget
     const cross = this.crossTarget
+    const aboutlink = this.aboutlinkTarget
+    const partnerslink = this.partnerslinkTarget
+    const contactlink = this.contactlinkTarget
     const aboutdown = this.aboutdownTarget
 
     if (window.location.pathname == "/" ) {
@@ -47,6 +50,18 @@ export default class extends Controller {
     cross.addEventListener("click", function () {
       cross.classList.toggle("rotate");
       aboutdown.style.height = "200px";
+    });
+
+    aboutlink.addEventListener("click", function () {
+      window.location.href = "./#about_link";
+    });
+
+    partnerslink.addEventListener("click", function () {
+      window.location.href = "./#partners_link";
+    });
+
+    contactlink.addEventListener("click", function () {
+      window.location.href = "./#contact_link";
     });
   }
 }

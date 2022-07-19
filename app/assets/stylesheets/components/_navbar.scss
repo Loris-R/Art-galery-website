@@ -75,8 +75,6 @@ a:active,
   }
 
   li, .column {
-    display: flex;
-    flex-direction: column;
     line-height: 2rem;
   }
 
@@ -116,4 +114,8 @@ a:active,
     transition: height .4s ease;
   }
 
+  .list_menu_column {
+    display: flex;
+    flex-direction: column;
+  }
 }
