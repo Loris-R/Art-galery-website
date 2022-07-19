@@ -54,6 +54,8 @@ export default class extends Controller {
 
     aboutlink.addEventListener("click", function () {
       window.location.href = "./#about_link";
+      cross.classList.toggle("rotate");
+      aboutdown.style.height = "0px";
     });
 
     partnerslink.addEventListener("click", function () {
