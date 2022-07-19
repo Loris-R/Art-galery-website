@@ -25,3 +25,22 @@
   }
 
 }
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+  .size {
+    font-size: 1rem;
+  }
+
+  .artist_name {
+    font-size: 1.2rem;
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .pics {
+    flex-direction: column;
+  }
+
+  .text {
+    border-bottom: 1px solid black;
+  }
+}
