@@ -4,7 +4,7 @@
       <ul>
         <li data-navbar-target="back">
           <% unless current_page?(root_path) %>
-            <%= link_to "< BACK", :back %>
+            <%= link_to "< BACK", "javascript:history.back()" %>
           <% end %>
         </li>
         <li data-navbar-target="about">
