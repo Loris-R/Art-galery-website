@@ -1,16 +1,21 @@
-<div class="registration_top">
+<div class="stick registration_top" style="position: sticky; top: 0; background-color: #f4f4f4">
   <%= link_to "< BACK", :back %>
   <h1 class="registration_title"> BIENVENUE DESIGN EXHIBITORS </h1>
   <div class="invisible_div"></div>
 </div>
 <% @design_exhibitors.each do |d_exhib| %>
   <div>
-    <p><%= simple_format(d_exhib.artist_name) %></p>
-    <% d_exhib.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-    <p><%= simple_format(d_exhib.description) %></p>
-    <p><%= link_to d_exhib.url, "http://#{d_exhib.url}" %></p>
-    <p>Artist name : <%= simple_format(d_exhib.artist_name) %></p>
+    <div class="artist_name">
+      <%= simple_format(d_exhib.artist_name) %>
+    </div>
+    <div class="pics">
+      <% d_exhib.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
+    <div class="text">
+      <%= simple_format(d_exhib.description) %>
+      <%= link_to d_exhib.url, "http://#{d_exhib.url}" %>
+    </div>
   </div>
 <% end %>
