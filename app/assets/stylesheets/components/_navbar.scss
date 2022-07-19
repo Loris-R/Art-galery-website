@@ -11,6 +11,10 @@ ul {
   justify-content: space-around;
 }
 
+a {
+  color: inherit;
+}
+
 a:link, .link:link {
   text-decoration: none;
   color: black;
