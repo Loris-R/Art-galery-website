@@ -68,8 +68,8 @@ d_exhib = DesignExhibitor.new(
   url: "www.pafatelier.com"
 )
 file1 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/paf1.png")
-file2 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIN_AUR%C3%89LIEN%20%26%20JEREMY_cr%C3%A9dit%20Yann%20Morrison.1%20%281%29.jpg")
-file3 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIN_AUR%C3%89LIEN%20%26%20JEREMY_cr%C3%A9dit%20Yann%20Morrison.jpg")
+file2 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/paf2.jpg")
+file3 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/paf3.jpg")
 d_exhib.photos.attach(io: file1, filename: "paf1.png", content_type: "image/png")
 d_exhib.photos.attach(io: file2, filename: "paf2.jpg", content_type: "image/jpg")
 d_exhib.photos.attach(io: file3, filename: "paf2.jpg", content_type: "image/jpg")
