@@ -11,18 +11,24 @@ puts "destroyed datas if development environment"
 
 #create users
 User.create!(
-  email: "loris.reynaud@gmail.com", password: "azerty", admin: true
+  email: "loris.reynaud@gmail.com", password: "azerty!5", admin: true
 )
 User.create!(
-  email: "fonsecarika@gmail.com", password: "1234567890", admin: true
+  email: "fonsecarika@gmail.com", password: "1234567890!5", admin: true
 )
-puts "Lolo & Rika created !"
+User.create!(
+  email: "olivier@bienvenue.art", password: "Olivier?75", admin: true
+)
+puts "Olivier, Lolo & Rika created !"
 
 #create Partner
 
-partner = Partner.create!(
+partner = Partner.new(
   description: "A few of the Hôtel La Louisiane, our main partner\r\nOften compared to the Chelsea Hotel in New York by its residents and loyal guests, La Louisiane has been active since 1823 in the heart of Saint-Germain-des-Près, keeping alive a good part of the neighborhood's memory. Its walls have grown thicker with both the artistic and literary activity they have hosted since the stay of Verlaine and Rimbaud.\r\nIn 1943 Jean-Paul Sartre and Simone de Beauvoir settled in the hotel, and with them it became the headquarters of Existentialism. Just as them, numerous writers, painters, visual artists, filmmakers, and photographers have passed through the rooms of La Louisiane; the likes of Juliette Gréco, Miles Davis, Nan Goldin, Lucian Freud, the members of Pink Floyd,\r\nand Quentin Tarantino, among others.\r\nThere are countless historical examples that show how creative activity has been an ongoing privilege of the hotel: Picasso encouraged the young César there, Dali joined him with Amanda Lear, Giacometti and Takis offered their works to Albert Cossery in exchange for paying for their rooms, Michael Leiris developed his reflections on art there, Keith Haring drew on its napkins; Nam June Paik enjoyed the absence of televisions in the rooms, and even Cy Twombly went so far as to state that he felt better at La Louisiane than at the Ritz. These and many others have contributed during each decade to shaping the hotel's legendary status.\r\n\r\nOther partners :\r\nArtviewer\r\nDaizylaizy\r\nAXA"
 )
+file = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/partner_photo_juliette.jpg")
+partner.photos.attach(io: file, filename: "juliette.jpg", content_type: "image/jpg")
+partner.save!
 puts "Partner test created !"
 
 # create categories
@@ -40,20 +46,34 @@ design = Design.create!(
 )
 puts "Art Fair & Design created"
 
-ArtFairExhibitor.create!(
-  art_fair_id: art_fair.id,
-  artist_name: "Loris",
-  description: "Photographe basé à Marseille",
-  url: "lorisreynaud.com"
+d_exhib = DesignExhibitor.new(
+  design_id: art_fair.id,
+  artist_name: "Galerie Pradier-Jeauneau\r\n Aurélien Jeauneau et Jeremy Pradier Jeauneau",
+  description: "Marché Paul Bert\r\nAllée 6 Stand 93\r\nMobilier\r\nXXe siècle\r\n+33(0)6 50 69 63 89\r\nLa galerie Pradier-Jeauneau présente à la Louisiane La Chambre de l'écrivain nomade.\r\nSans attache, il vit de chambre d’hôtel en chambre d’hôtel à travers le monde, où il\r\ndresse une tente, mi-berbère mi-romaine. Un monde s'y déploie : fauteuils, bureau, et\r\nlit de jour où les souvenirs se mêlent aux promesses.\r\nDu sol au plafond, la tente sera en velours fushia, couleur vibrante et urbaine.\r\nL'installation monumentale vient faire oublier la chambre d'hôtel. A l'image de ce qu'à\r\noffert La Louisiane à ses pensionnaires illustres, notre écrivain nomade est ici chez lui :\r\nun bivouac rempli de son imaginaire pointu, queer et irrévérencieux.\r\nPour cette première participation, Aurélien Jeauneau et Jeremy Pradier-Jeauneau font\r\nappel à leur partenaire Vincent Thévenon de la Maison Thévenon. A eux trois, ils ont\r\ninventé une couleur \"Louisiane\", flamboyante et hors-temps.\r\nAurélien Jeauneau et Jeremy Pradier-Jeauneau défendent les designers français du\r\nXXe. Le binôme s’est rencontré à l’Institut National d’Histoire de l’Art en 2007, et\r\ncontinue ses recherches sur les arts décoratifs de la Reconstruction française à nos\r\njours.\r\nAvec de nombreuses expositions thématiques à son actif et de collaborations\r\nprestigieuses la galerie Pradier-Jeauneau développe une expertise autour d’un mobilier\r\nd’exception, entre collection, décoration, littérature et cinéma.",
+  url: "pradierjeauneau@gmail.com"
 )
+file1 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIGN_PradierJeauneau-Thevenon_cr%C3%A9dit%20est%20M%C3%A9lodie%20Descours.jpg")
+file2 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIN_AUR%C3%89LIEN%20%26%20JEREMY_cr%C3%A9dit%20Yann%20Morrison.1%20%281%29.jpg")
+file3 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIN_AUR%C3%89LIEN%20%26%20JEREMY_cr%C3%A9dit%20Yann%20Morrison.jpg")
+d_exhib.photos.attach(io: file1, filename: "pradier-jeauneau1.jpg", content_type: "image/jpg")
+d_exhib.photos.attach(io: file2, filename: "pradier-jeauneau2.jpg", content_type: "image/jpg")
+d_exhib.photos.attach(io: file3, filename: "pradier-jeauneau3.jpg", content_type: "image/jpg")
+d_exhib.save!
+puts "#{d_exhib.artist_name} Design exhibitors created"
 
-DesignExhibitor.create!(
-  design_id: design.id,
-  artist_name: "Rika",
-  description: "Sculptrice métal",
-  url: "erikaki.com"
+d_exhib = DesignExhibitor.new(
+  design_id: art_fair.id,
+  artist_name: "Paf atelier\r\n Pollet Agathe Designer",
+  description: "36 Boulevard de la Bastille, 75012 Paris\r\n+33 (0)6 32 29 24 22 / +\r\n33 (0)9 75 49 46 76\r\n\r\nInstallé à Paris, Paf est un atelier de conception d’architecture et de scénographie.\r\nAnimé par l’expérimentation, la recherche en architecture et l’art, Christopher Dessus,\r\nArchitecte DE, scénographe, commissaire d’exposition et directeur de l’association Pli\r\n(Éditions et Workshop) crée l’atelier en 2017. Ce dernier permet de remettre en\r\nquestion les conditions de la pratique de l’architecture, de la création à la production.\r\nChaque projet signé par l’atelier est une recherche mesurée entre savoir et savoir–faire,\r\nréfexion et création, où l’ensemble de la conception et de la production ne peuvent\r\nêtre envisagés de manière dissociée.",
+  url: "www.pafatelier.com"
 )
-
-puts "1 Art Fair & 1 Design exhibitors created"
+file1 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/paf1.png")
+file2 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIN_AUR%C3%89LIEN%20%26%20JEREMY_cr%C3%A9dit%20Yann%20Morrison.1%20%281%29.jpg")
+file3 = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/BIENVENUE%20DESIN_AUR%C3%89LIEN%20%26%20JEREMY_cr%C3%A9dit%20Yann%20Morrison.jpg")
+d_exhib.photos.attach(io: file1, filename: "paf1.png", content_type: "image/png")
+d_exhib.photos.attach(io: file2, filename: "paf2.jpg", content_type: "image/jpg")
+d_exhib.photos.attach(io: file3, filename: "paf2.jpg", content_type: "image/jpg")
+d_exhib.save!
+puts "#{d_exhib.artist_name} Design exhibitors created"
 
 puts "Seeds terminated !"

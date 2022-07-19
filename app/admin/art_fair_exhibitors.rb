@@ -31,6 +31,9 @@ ActiveAdmin.register ArtFairExhibitor do
       f.input :artist_name
       f.input :description
       f.input :url
+      f.inputs "Ajoutez des photos" do
+        f.input :photos, as: :file, input_html: { multiple: true }
+      end
     end
     f.actions
   end
