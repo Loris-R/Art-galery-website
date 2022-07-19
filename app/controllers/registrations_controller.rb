@@ -1,4 +1,6 @@
 class RegistrationsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def new
     @titles = Registration::TITLES
     @status = Registration::STATUS
@@ -11,7 +13,7 @@ class RegistrationsController < ApplicationController
     if @registration.save!
       if @registration.category == "Art"
         redirect_to art_fair_path
-      else 
+      else
         redirect_to design_path
       end
       flash[:notice] = "Thank you, your registration has been sent !"
