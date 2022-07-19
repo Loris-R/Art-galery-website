@@ -69,3 +69,27 @@
   background-color: white;
   border-radius: 2px;
 }
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+
+  .registration-form {
+    width: 90%;
+  }
+
+  .form_in_middle {
+    height: 90%;
+  }
+
+  .registration_top {
+    height: 5%;
+  }
+
+  #footer {
+    height: 5%;
+  }
+
+  .group_one {
+    display: unset;
+    line-height: 37px;
+  }
+}
