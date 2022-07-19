@@ -60,10 +60,14 @@ export default class extends Controller {
 
     partnerslink.addEventListener("click", function () {
       window.location.href = "./#partners_link";
+      cross.classList.toggle("rotate");
+      aboutdown.style.height = "0px";
     });
 
     contactlink.addEventListener("click", function () {
       window.location.href = "./#contact_link";
+      cross.classList.toggle("rotate");
+      aboutdown.style.height = "0px";
     });
   }
 }
