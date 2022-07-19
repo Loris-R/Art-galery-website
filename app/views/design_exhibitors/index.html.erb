@@ -8,5 +8,11 @@
     <p><%= simple_format(d_exhib.artist_name) %></p>
     <p><%= simple_format(d_exhib.description) %></p>
     <p><%= link_to d_exhib.url, "http://#{d_exhib.url}" %></p>
+    <p>Artist name : <%= simple_format(d_exhib.artist_name) %></p>
+    <% d_exhib.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+    <p>description : <%= simple_format(d_exhib.description) %></p>
+    <p>link to the artist : <%= link_to d_exhib.url, "http://#{d_exhib.url}" %></p>
   </div>
 <% end %>
