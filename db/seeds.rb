@@ -23,9 +23,12 @@ puts "Olivier, Lolo & Rika created !"
 
 #create Partner
 
-partner = Partner.create!(
+partner = Partner.new(
   description: "A few of the Hôtel La Louisiane, our main partner\r\nOften compared to the Chelsea Hotel in New York by its residents and loyal guests, La Louisiane has been active since 1823 in the heart of Saint-Germain-des-Près, keeping alive a good part of the neighborhood's memory. Its walls have grown thicker with both the artistic and literary activity they have hosted since the stay of Verlaine and Rimbaud.\r\nIn 1943 Jean-Paul Sartre and Simone de Beauvoir settled in the hotel, and with them it became the headquarters of Existentialism. Just as them, numerous writers, painters, visual artists, filmmakers, and photographers have passed through the rooms of La Louisiane; the likes of Juliette Gréco, Miles Davis, Nan Goldin, Lucian Freud, the members of Pink Floyd,\r\nand Quentin Tarantino, among others.\r\nThere are countless historical examples that show how creative activity has been an ongoing privilege of the hotel: Picasso encouraged the young César there, Dali joined him with Amanda Lear, Giacometti and Takis offered their works to Albert Cossery in exchange for paying for their rooms, Michael Leiris developed his reflections on art there, Keith Haring drew on its napkins; Nam June Paik enjoyed the absence of televisions in the rooms, and even Cy Twombly went so far as to state that he felt better at La Louisiane than at the Ritz. These and many others have contributed during each decade to shaping the hotel's legendary status.\r\n\r\nOther partners :\r\nArtviewer\r\nDaizylaizy\r\nAXA"
 )
+file = URI.open("https://i0.wp.com/revelateurphoceen.com/bienvenue/partner_photo_juliette.jpg")
+partner.photos.attach(io: file, filename: "juliette.jpg", content_type: "image/jpg")
+partner.save!
 puts "Partner test created !"
 
 # create categories
