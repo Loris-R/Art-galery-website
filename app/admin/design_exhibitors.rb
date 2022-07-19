@@ -26,10 +26,13 @@ ActiveAdmin.register DesignExhibitor do
   
   form do |f|
     f.inputs "Design Exhibitor" do
-      f.hidden_field :art_fair_id, value: ArtFair.all.last.nil? ? nil : ArtFair.all.last.id
+      f.hidden_field :design_id, value: Design.all.last.nil? ? nil : Design.all.last.id
       f.input :artist_name
       f.input :description
       f.input :url
+      f.inputs "Ajoutez des photos" do
+        f.input :photos, as: :file, input_html: { multiple: true }
+      end
     end
     f.actions
   end
