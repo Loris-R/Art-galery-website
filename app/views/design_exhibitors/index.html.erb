@@ -1,17 +1,27 @@
-<div class="registration_top">
+<div class="comp_mode exhibitors_top">
   <%= link_to "< BACK", "javascript:history.back()" %>
-  <h1 class="registration_title size"> BIENVENUE DESIGN EXHIBITORS </h1>
+  <h1 class="registration_title"> BIENVENUE DESIGN EXHIBITORS </h1>
   <div class="invisible_div"></div>
+</div>
+<div class="tel_mode">
+  <%= render "shared/navbar" %>
+  <div class="stick">
+    <h1 class="exhibitors_title size"> BIENVENUE DESIGN EXHIBITORS </h1>
+  </div>
 </div>
 <% @design_exhibitors.each do |d_exhib| %>
   <div>
     <div class="artist_name">
       <%= simple_format(d_exhib.artist_name) %>
     </div>
-    <div class="pics">
-      <% d_exhib.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
+    <div class="flex_middle">
+      <div class="pics">
+        <% d_exhib.photos.each do |photo| %>
+          <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>); background-size: cover;
+           background-position: center">
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="text">
       <%= simple_format(d_exhib.description) %>
