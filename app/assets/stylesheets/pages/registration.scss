@@ -40,6 +40,9 @@
   align-items: center;
   border-bottom: 1px solid black;
   padding: 6px;
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
 }
 
 .form_in_middle {
@@ -74,6 +77,7 @@
 
   .registration-form {
     width: 90%;
+    padding: 1rem;
   }
 
   .form_in_middle {
@@ -81,10 +85,6 @@
   }
 
   .registration_top {
-    height: 5%;
-  }
-
-  #footer {
     height: 5%;
   }
 
