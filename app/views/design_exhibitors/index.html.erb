@@ -9,23 +9,27 @@
     <h1 class="exhibitors_title size"> BIENVENUE DESIGN EXHIBITORS </h1>
   </div>
 </div>
-<% @design_exhibitors.each do |d_exhib| %>
-  <div>
-    <div class="artist_name">
-      <%= simple_format(d_exhib.artist_name) %>
-    </div>
-    <div class="flex_middle">
-      <div class="pics">
-        <% d_exhib.photos.each do |photo| %>
-          <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>); background-size: cover;
-           background-position: center">
-          </div>
-        <% end %>
+<% if @design_exhibitors.empty? %>
+  <p>Coming Soon</p>
+<% else %>
+  <% @design_exhibitors.each do |d_exhib| %>
+    <div>
+      <div class="artist_name">
+        <%= simple_format(d_exhib.artist_name) %>
+      </div>
+      <div class="flex_middle">
+        <div class="pics">
+          <% d_exhib.photos.each do |photo| %>
+            <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>); background-size: cover;
+            background-position: center">
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="text">
+        <%= simple_format(d_exhib.description) %>
+        <%= link_to d_exhib.url, "http://#{d_exhib.url}" %>
       </div>
     </div>
-    <div class="text">
-      <%= simple_format(d_exhib.description) %>
-      <%= link_to d_exhib.url, "http://#{d_exhib.url}" %>
-    </div>
-  </div>
+  <% end %>
 <% end %>
