@@ -1,18 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["back", "about", "design", "contact", "artfair", "registration", "cross", "aboutdown", "aboutlink", "partnerslink", "contactlink"]
+  static targets = ["back", "about", "design", "contact", "artfair", "registration", "cross", "aboutdown"]
+  
   connect() {
+    const cross = this.crossTarget
     const back = this.backTarget
     const about = this.aboutTarget
     const design = this.designTarget
     const contact = this.contactTarget
     const registration = this.registrationTarget
     const artfair = this.artfairTarget
-    const cross = this.crossTarget
-    const aboutlink = this.aboutlinkTarget
-    const partnerslink = this.partnerslinkTarget
-    const contactlink = this.contactlinkTarget
     const aboutdown = this.aboutdownTarget
 
     if (window.location.pathname == "/" ) {
@@ -51,23 +49,13 @@ export default class extends Controller {
       cross.classList.toggle("rotate");
       aboutdown.style.height = "200px";
     });
+  }
 
-    aboutlink.addEventListener("click", function () {
-      window.location.href = "./#about_link";
-      cross.classList.toggle("rotate");
-      aboutdown.style.height = "0px";
-    });
+  link() {
+    const cross = this.crossTarget
+    const aboutdown = this.aboutdownTarget
 
-    partnerslink.addEventListener("click", function () {
-      window.location.href = "./#partners_link";
-      cross.classList.toggle("rotate");
-      aboutdown.style.height = "0px";
-    });
-
-    contactlink.addEventListener("click", function () {
-      window.location.href = "./#contact_link";
-      cross.classList.toggle("rotate");
-      aboutdown.style.height = "0px";
-    });
+    cross.classList.toggle("rotate");
+    aboutdown.style.height = "0px";
   }
 }

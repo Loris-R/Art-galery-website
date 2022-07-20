@@ -178,11 +178,10 @@
       </div>
     </div>
   </div>
-  <div id="about_link" class="only_on_tel" style="height: 8.35vw;"></div>
-    <main class="only_on_tel skew-scroll" style="transform: skewY(5.08047e-251deg);">
+  <main class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
     <section class="all_text">
       <div class="section_one">
-        <p>For its second design edition, Bienvenue Design fair will take place at the Hotel La Louisiane, 60 rue de Seine, in the mythical Saint-Germain-des-Prés district, during the Paris Design Week, from September 8 to 11.<br>
+        <p id="about_link">For its second design edition, Bienvenue Design fair will take place at the Hotel La Louisiane, 60 rue de Seine, in the mythical Saint-Germain-des-Prés district, during the Paris Design Week, from September 8 to 11.<br>
         Star designers and young talents, 20th century furniture and contemporary creations take over the rooms, hallways and other common spaces of this bohemian hotel that has been the temporary residence of such famous guests as Simone de Beauvoir and Jean-Paul Sartre, Miles Davis and Juliette Greco, Quentin Tarantino, Etienne Daho and Jim Morrison, among many others.<br>
         Galleries, top editors, designers and collectives are selected by the curators Jean-François Declercq et Marie Godfrain to be exhibited in this edition of Bienvenue, echoing the desire of Xavier Blanchot, owner of La Lousiane, to reinstate this historic district in the realm of contemporary creation and regain its position in Parisian cultural life.<br>
         Founded in 2018, BIENVENUE is an events platform which aims to connect galleries, professionals and art industries with both collectors and amateurs.
@@ -200,34 +199,12 @@
       </div>
     </section>
   </main>
-  <main id="about_link_computer" class="skew-scroll only_on_comp" style="transform: skewY(5.08047e-251deg);">
+  <main class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
     <section class="all_text">
-      <div class="section_one">
-        <p>For its second design edition, Bienvenue Design fair will take place at the Hotel La Louisiane, 60 rue de Seine, in the mythical Saint-Germain-des-Prés district, during the Paris Design Week, from September 8 to 11.<br>
-        Star designers and young talents, 20th century furniture and contemporary creations take over the rooms, hallways and other common spaces of this bohemian hotel that has been the temporary residence of such famous guests as Simone de Beauvoir and Jean-Paul Sartre, Miles Davis and Juliette Greco, Quentin Tarantino, Etienne Daho and Jim Morrison, among many others.<br>
-        Galleries, top editors, designers and collectives are selected by the curators Jean-François Declercq et Marie Godfrain to be exhibited in this edition of Bienvenue, echoing the desire of Xavier Blanchot, owner of La Lousiane, to reinstate this historic district in the realm of contemporary creation and regain its position in Parisian cultural life.<br>
-        Founded in 2018, BIENVENUE is an events platform which aims to connect galleries, professionals and art industries with both collectors and amateurs.
-        In a spirit of decompartmentalization, BIENVENUE deploys its actions in the fields of Contemporary Art and Design.
-        </p>
-      </div>
-      <div class="section_email">
-        <p> Ask for information
-          <a href="mailto:info@bienvenue.art" id="email_art"> info@bienvenue.art</a>
-        </p>
-      </div>
-      <div class="section_two_about">
-        <p> About the Hotel La Louisiane...<br> Often compared to the Chelsea Hotel in New York by its residents and loyal travelers, La Louisiane, independent since 1823, is at the very center of Saint-Germain-des-Prés, of which it preserves a part of the memory. The walls, filled with the history of art and literature, have been thickening with the passing years since the stay of Verlaine and Rimbaud. In 1943, Jean-Paul Sartre and Simone de Beauvoir settled there and made it the headquarters of the Existentialists.<br> Many writers, painters, visual artists, musicians, filmmakers, and photographers have lived at La Louisiane. The hotel has always offered stays of all artistic, festive and friendly freedoms. Among them, Juliette Gréco, Miles Davis, Nan Goldin, Lucien Freud, the Pink-Floyd, Quentin Tarantino… Etienne Daho dedicated a song to it in his album BLITZ "Hôtel des Infidèles."<br> The hotel has a special relationship with creation: Picasso encouraged the young César there, Dali came to join him with Amanda Lear, Giacometti and Takis offered works of art to Albert Cossery to pay for their rooms, Michel Leiris reflected on art,Keith Haring drew on the hotel napkins, Cy Twombly said he was better off there than at the Ritz,Nam June Paik liked not finding a television there, and so many others who have added to the legend with each passing decade!
-        </p>
-      </div>
-    </section>
-  </main>
-  <div id="partners_link" class="only_on_tel" style="height: 106vw;"></div>
-  <main class="only_on_tel skew-scroll" style="transform: skewY(5.08047e-251deg);">
-    <section class="all_text tel_position">
       <div class="partner_display">
         <div class="display_photos">
           <% @partner.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: "468px", width: "400px", class: "img_partner_juliette" %>
+            <%= cl_image_tag photo.key, height: "468px", width: "400px", class: "img_partner_juliette", id: "partners_link" %>
           <% end %>
         </div>
         <div class="margin_to_photo">
@@ -236,24 +213,10 @@
       </div>
     </section>
   </main>
-  <main id="partners_link_computer" class="skew-scroll only_on_comp" style="transform: skewY(5.08047e-251deg);">
-    <section class="all_text tel_position">
-      <div class="partner_display">
-        <div class="display_photos">
-          <% @partner.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: "468px", width: "400px", class: "img_partner_juliette" %>
-          <% end %>
-        </div>
-        <div class="margin_to_photo">
-          <%= simple_format(@partner.description) %>
-        </div>
-      </div>
-    </section>
-  </main>
-  <section id="contact_link" class="all_text border_ height_tel">
+  <section class="all_text border_ height_tel">
     <div style="transform: skewY(5.08047e-251deg);">
       <div class="logos_lign">
-		    <p><%= link_to "http://instagram.com/bienvenue.art"  do %>
+		    <p id="contact_link"><%= link_to "http://instagram.com/bienvenue.art"  do %>
             <%= image_tag "instagram-logo.png", :class => "logos insta" %>
            <% end %>
 		  	</p>
