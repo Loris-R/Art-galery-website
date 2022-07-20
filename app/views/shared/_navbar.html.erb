@@ -73,10 +73,10 @@
                <a href="./#partners_link">PARTNERS</a>
             </li>
             <li>
-              <%= link_to 'Art Fair', art_fair_path, class:"link"  %>
+              <%= link_to 'Bienvenue Art Fair', art_fair_path, class:"link"  %>
             </li>
             <li>
-              <%= link_to 'Design', design_path, class:"link"  %>
+              <%= link_to 'Bienvenue Design', design_path, class:"link"  %>
             </li>
             <li data-navbar-target="contactlink">
                <a href="./#contact_link">CONTACT</a>
@@ -96,7 +96,7 @@
           <li>
             <%= link_to "PROGRAMM", "/art-fair-programm", class:"link" %>
           </li>
-        <% else %>
+        <% elsif current_page?("/design") %>
           <li>
             <%= link_to "EXHIBITORS", design_exhibitors_path, class:"link" %>
           </li>
