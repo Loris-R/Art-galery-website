@@ -140,14 +140,6 @@ body {
   margin-bottom: 15vh;
 }
 
-.only_on_tel {
-  display: none;
-}
-
-.only_on_comp {
-  display: block;
-}
-
 @media only screen and (min-width:279px) and (max-width:766px) {
 
   #letter-b {
@@ -183,19 +175,7 @@ body {
     margin-top: 0;
   }
 
-  .tel_position {
-    position: relative;
-    bottom: 100vw;
-  }
   .height_tel {
     height: 409px;
-  }
-
-  .only_on_tel {
-    display: block;
-  }
-
-  .only_on_comp {
-    display: none;
   }
 }
