@@ -13,6 +13,6 @@ class RegistrationMailer < ApplicationMailer
     @status = params[:status]
     @category = params[:category]
 
-    mail subject: 'Nouvelle inscription sur Bienvenue.art'
+    mail (to: "loris.reynaud@gmail.com", subject: 'Nouvelle inscription sur Bienvenue.art')
   end
 end
