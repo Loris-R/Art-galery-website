@@ -60,7 +60,7 @@
     <% end %>
   </div>
   <div class="header" id="nav_tel">
-    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %> <%= "erase_lign" if current_page? (design_exhibitors_path) %>">
+    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
       <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
       </li>
@@ -75,7 +75,7 @@
             </li>
             <li>
               <% if current_page?(root_path) %>
-                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="270">ABOUT</a>
+                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="270">PARTNERS</a>
               <% else %>
                 <%= link_to "PARTNERS", root_path, class: "link" %>
               <% end %>
@@ -88,7 +88,7 @@
             </li>
             <li>
               <% if current_page?(root_path) %>
-                <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">ABOUT</a>
+                <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">CONTACT</a>
               <% else %>
                 <%= link_to "CONTACT", root_path, class: "link" %>
               <% end %>
