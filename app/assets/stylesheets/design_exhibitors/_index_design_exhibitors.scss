@@ -120,3 +120,24 @@
     margin-top: 14vh;
   }
 }
+
+@media only screen and (min-width:767px) and (max-width: 1024px) {
+  .pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pics_divs {
+    height: 59vh;
+    width: 85%;
+  }
+
+  .artist-1 {
+    margin-top: 7vh;
+  }
+
+  .text {
+    border-bottom: 1px solid black;
+  }
+}
