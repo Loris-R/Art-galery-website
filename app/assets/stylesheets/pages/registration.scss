@@ -80,10 +80,6 @@
     padding: 1rem;
   }
 
-  .form_in_middle {
-    height: 90%;
-  }
-
   .registration_top {
     height: 5%;
   }
@@ -92,4 +88,10 @@
     display: unset;
     line-height: 37px;
   }
+}
+
+@media only screen and (min-width:767px) and (max-width: 1024px) {
+  .registration-form {
+      width: 71%;
+    }
 }
