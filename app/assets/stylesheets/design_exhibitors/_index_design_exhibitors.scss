@@ -43,9 +43,10 @@
   align-items: center;
   border-bottom: 1px solid black;
   padding: 6px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: -webkit-fixed;
+  position: fixed;
   top: 0;
+  width: 100%;
   background-color: #f4f4f4;
 }
 
@@ -83,12 +84,16 @@
   }
 
   .stick {
-    position: sticky;
-    top:6%;
+    position: fixed;
+    top: 6.5%;
+    width: 100%;
   }
 
   .tel_mode {
     display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   .comp_mode {
@@ -98,5 +103,9 @@
   .pics_divs {
     height: 300px;
     width: 100%;
+  }
+
+  .artist-1 {
+    margin-top: 14vh;
   }
 }

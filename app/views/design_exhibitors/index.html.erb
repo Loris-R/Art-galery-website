@@ -1,22 +1,24 @@
-<div class="comp_mode exhibitors_top">
-  <%= link_to "< BACK", "javascript:history.back()" %>
-  <h1 class="registration_title"> BIENVENUE DESIGN EXHIBITORS </h1>
-  <div class="invisible_div"></div>
-</div>
-<div class="tel_mode">
-  <%= render "shared/navbar" %>
-  <div class="stick">
-    <h1 class="exhibitors_title size"> BIENVENUE DESIGN EXHIBITORS </h1>
+  <div class="comp_mode exhibitors_top">
+    <%= link_to "< BACK", "javascript:history.back()" %>
+    <h1 class="registration_title"> BIENVENUE DESIGN EXHIBITORS </h1>
+    <div class="invisible_div"></div>
   </div>
-</div>
+  <div class="tel_mode">
+    <%= render "shared/navbar" %>
+    <div class="stick">
+      <h1 class="exhibitors_title size"> BIENVENUE DESIGN EXHIBITORS </h1>
+    </div>
+  </div>
 <% if @design_exhibitors.empty? %>
   <p>Coming Soon</p>
 <% else %>
+  <% artist_nb = 1 %>
   <% @design_exhibitors.each do |d_exhib| %>
-    <div>
+    <div class="all_exhibitors">
       <div class="artist_name">
-        <%= simple_format(d_exhib.artist_name) %>
+        <%= simple_format(d_exhib.artist_name, class: "artist-#{artist_nb}") %>
       </div>
+      <% artist_nb += 1 %>
       <div class="flex_middle">
         <div class="pics">
           <% d_exhib.photos.each do |photo| %>

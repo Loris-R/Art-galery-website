@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = ["back", "about", "design", "contact", "artfair", "registration", "cross", "aboutdown"]
-  
+
   connect() {
     const cross = this.crossTarget
     const back = this.backTarget
