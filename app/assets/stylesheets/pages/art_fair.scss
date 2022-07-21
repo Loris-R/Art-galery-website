@@ -39,7 +39,12 @@ p:nth-of-type(3) {
   margin-bottom: 3vh;
 }
 
-@media only screen and (min-width:279px) and (max-width:766px) {
+.pics_divs {
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-width:279px) and (max-width:360px) {
   .down_border_tel {
     border-bottom: 1px solid black;
     background-color: #f4f4f4;
@@ -59,7 +64,7 @@ p:nth-of-type(3) {
   }
 }
 
-@media only screen and (min-width:767px) and (max-width: 1024px) {
+@media only screen and (min-width:361px) and (max-width: 1260px) {
   .down_border_tel {
     border-bottom: 1px solid black;
     background-color: #f4f4f4;
@@ -79,5 +84,11 @@ p:nth-of-type(3) {
 
   .coordinates-design {
     display: unset;
+  }
+
+  .pics_divs {
+    background-size: contain;
+    background-repeat: no-repeat;
+
   }
 }
