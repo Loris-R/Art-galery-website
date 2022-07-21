@@ -67,10 +67,18 @@
         <div class="column slide" data-navbar-target="aboutdown">
           <ul class="list_menu_column">
             <li>
-              <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">ABOUT</a>
+              <% if current_page?(root_path) %>
+                <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">ABOUT</a>
+              <% else %>
+                <%= link_to "ABOUT", root_path, class: "link" %>
+              <% end %>
             </li>
             <li>
-              <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="270">PARTNERS</a>
+              <% if current_page?(root_path) %>
+                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="270">ABOUT</a>
+              <% else %>
+                <%= link_to "PARTNERS", root_path, class: "link" %>
+              <% end %>
             </li>
             <li>
               <%= link_to 'Bienvenue Art Fair', art_fair_path, class:"link" %>
@@ -79,7 +87,11 @@
               <%= link_to 'Bienvenue Design', design_path, class:"link" %>
             </li>
             <li>
-              <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">CONTACT</a>
+              <% if current_page?(root_path) %>
+                <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">ABOUT</a>
+              <% else %>
+                <%= link_to "CONTACT", root_path, class: "link" %>
+              <% end %>
             </li>
             <li>
               <%= link_to "REGISTRATION", new_registration_path, class:"link" %>
