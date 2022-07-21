@@ -12,7 +12,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)
     if @registration.save!
       if @registration.category == "Art"
-        mail = RegistrationMailer.with(registration: @registration).new_register.deliver_now
+        RegistrationMailer.with(registration: @registration).new_register.deliver_now
         redirect_to art_fair_path
       else
         redirect_to design_path
