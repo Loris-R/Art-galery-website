@@ -176,6 +176,33 @@ body {
   }
 
   .height_tel {
-    height: 409px;
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width:767px) and (max-width: 1024px){
+  .all_text {
+    height: auto;
+  }
+
+  .partner_display {
+    display: unset;
+  }
+
+  .img_partner_juliette {
+    margin-bottom: 5vh;
+  }
+
+  .display_photos {
+    width: 100%;
+    align-items: center;
+  }
+
+  .height_tel {
+    height: 100vh;
+  }
+
+  .logos {
+    width: 7vw;
   }
 }
