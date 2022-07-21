@@ -58,3 +58,26 @@ p:nth-of-type(3) {
     display: unset;
   }
 }
+
+@media only screen and (min-width:767px) and (max-width: 1024px) {
+  .down_border_tel {
+    border-bottom: 1px solid black;
+    background-color: #f4f4f4;
+  }
+
+  .coordinates {
+    display: unset;
+  }
+
+  .about_art {
+    margin-top: 7rem;
+  }
+
+  .tab_pro {
+    margin-top: 4rem;
+  }
+
+  .coordinates-design {
+    display: unset;
+  }
+}
