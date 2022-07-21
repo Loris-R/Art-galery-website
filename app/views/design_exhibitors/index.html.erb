@@ -10,7 +10,9 @@
     </div>
   </div>
 <% if @design_exhibitors.empty? %>
-  <p>Coming Soon</p>
+  <div class="middle_coming">
+    <p class="come">COMING SOON</p>
+  </div>
 <% else %>
   <% artist_nb = 1 %>
   <% @design_exhibitors.each do |d_exhib| %>
