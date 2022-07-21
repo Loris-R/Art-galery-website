@@ -39,7 +39,6 @@ a:active,
 }
 
 .main-nav {
-  border-bottom: 1px solid black;
   background-color: #f4f4f4;
 }
 
@@ -47,6 +46,8 @@ a:active,
   position: sticky;
   top: 0px;
   z-index: 15;
+  background-color: #f4f4f4;
+  width: 100%;
 }
 
 .go-back {
@@ -67,6 +68,10 @@ a:active,
 
 #nav_tel {
   display: none;
+}
+
+.navbar-nav {
+  border-bottom: 1px solid black;
 }
 
 @media only screen and (min-width:279px) and (max-width:766px) {
@@ -121,5 +126,23 @@ a:active,
   .list_menu_column {
     display: flex;
     flex-direction: column;
+  }
+
+  .navbar_down {
+    position: fixed;
+    top: 6.5%;
+    width: 100%;
+  }
+
+  .stick_nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: 30;
+  }
+
+  .erase_lign {
+    border-bottom: unset;
   }
 }
