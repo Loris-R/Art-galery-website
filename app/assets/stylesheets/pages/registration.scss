@@ -6,8 +6,9 @@
   border: 1px solid black;
   padding: 2rem;
   border-radius: 2px;
-  background-color: #f4f4f4;
-
+  background-color: #f3f2f2ad;
+  height: 50%;
+  justify-content: center;
 
   input {
     margin: 0 0.5rem;
@@ -47,13 +48,15 @@
 
 .form_in_middle {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 91vh;
-  align-items: center;
-  background-color: #e3e3e3;
+  height: auto;
 }
 
+.gif_middle_change {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .group_one {
   display: flex;
   flex-direction: row;
@@ -73,11 +76,14 @@
   border-radius: 2px;
 }
 
-@media only screen and (min-width:279px) and (max-width:766px) {
+@media only screen and (min-width:279px) and (max-width:1024px) {
 
   .registration-form {
-    width: 90%;
+    width: 100%;
     padding: 1rem;
+    border: unset;
+    border-radius: unset;
+    height: 91vh;
   }
 
   .registration_top {
@@ -88,10 +94,5 @@
     display: unset;
     line-height: 37px;
   }
-}
 
-@media only screen and (min-width:767px) and (max-width: 1024px) {
-  .registration-form {
-      width: 71%;
-    }
 }
