@@ -19,6 +19,18 @@
   }
 }
 
+.comp_gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.in_the_middle {
+  height: 166%;
+  display: flex;
+  width: 100%;
+}
 .registration-group {
   margin: 0.5rem 0;
   display: flex;
