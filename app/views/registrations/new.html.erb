@@ -3,7 +3,9 @@
   <h1 class="registration_title"> REGISTRATION </h1>
   <div class="invisible_div"></div>
 </div>
-<div class="form_in_middle">
+<div class="in_the_middle">
+<div class="gif">
+<div style="height: 100%" class="comp_gif">
   <%= form_with model: @registration, method: :post, class: "registration-form" do |reg_form| %>
     <div class="registration-group group_one">
       <%= reg_form.label "Select your title:", class: "underline" %>
@@ -37,4 +39,6 @@
     </div>
     <%= reg_form.submit "SUBMIT", class: "button_sub" %>
   <% end %>
+</div>
+</div>
 </div>

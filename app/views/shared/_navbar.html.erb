@@ -1,5 +1,5 @@
 <div data-controller="navbar" id="header">
-  <div class="nav_height" id="nav_computer">
+  <div id="nav_computer">
     <nav class="main-nav">
       <ul>
         <li data-navbar-target="back">
@@ -8,11 +8,11 @@
           <% end %>
         </li>
         <li data-navbar-target="about">
-          <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="75">ABOUT</a>
+          <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="137">ABOUT</a>
         </li>
         <% if current_page?(root_path) %>
           <li data-navbar-target="partners">
-            <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="99">PARTNERS</a>
+            <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="160">PARTNERS</a>
           </li>
         <% end %>
     	  <li data-navbar-target="artfair">
@@ -59,7 +59,7 @@
       </nav>
     <% end %>
   </div>
-  <div class="header" id="nav_tel">
+  <div class="header nav_height" id="nav_tel">
     <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
       <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
@@ -75,7 +75,7 @@
             </li>
             <li>
               <% if current_page?(root_path) %>
-                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="270">PARTNERS</a>
+                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="70">PARTNERS</a>
               <% else %>
                 <%= link_to "PARTNERS", root_path, class: "link" %>
               <% end %>

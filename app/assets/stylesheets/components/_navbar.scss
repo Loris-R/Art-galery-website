@@ -59,10 +59,6 @@ a:active,
   display: none;
 }
 
-.nav_height {
-  height: 6vw;
-}
-
 #nav_computer {
   display: block;
 }
@@ -80,8 +76,13 @@ a:active,
     display: none;
   }
 
+  .nav_height {
+    height: 6vw;
+  }
+
   #nav_tel {
     display: block;
+    background-color: #f4f4f4;
   }
 
   li, .column {
@@ -145,5 +146,9 @@ a:active,
 
   .erase_lign {
     border-bottom: unset;
+  }
+
+  .navbar-nav {
+    background-color: #f4f4f4;
   }
 }

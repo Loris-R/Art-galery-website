@@ -20,53 +20,18 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100vh;
-  width: 98vw;
+  height: 170vh;
+  width: 99vw;
+  padding: 0;
+  margin: 0;
 }
 
-.together {
-   position: relative;
-}
-
-#letter-b-wrapper {
+.gif_home {
+  background-image: url(BIENVENUE-GIF-2.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  z-index: 1;
-  perspective: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#letter-b {
-  width: 27rem;
-}
-
-.letter-b {
-  width: 2.25vw;
-  position: absolute;
-  pointer-events: none;
-}
-
-#letter-b.y-axis {
-  animation: y-axis-animation 5s infinite linear;
-}
-
-@keyframes y-axis-animation {
-  from {
-    transform: rotateY(180deg)
-  }
-
-  to {
-    transform: rotateY(-180deg)
-  }
-}
-
-#animation {
-  width: 100vw;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
 }
 
 .all_text {
@@ -142,14 +107,6 @@ body {
 
 @media only screen and (min-width:279px) and (max-width:766px) {
 
-  #letter-b {
-      width: 19rem;
-    }
-
-  .letter-b {
-    width: 5.25vw;
-  }
-
   .all_text {
     height: auto;
     font-size: 13px;
@@ -177,6 +134,10 @@ body {
 
   .height_tel {
     height: 100vh;
+  }
+
+  .section_one {
+    margin-top: 2rem;
   }
 }
 
