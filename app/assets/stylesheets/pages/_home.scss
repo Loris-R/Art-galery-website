@@ -26,13 +26,12 @@ body {
   margin: 0;
 }
 
-.gif {
+.gif_home {
   background-image: url(BIENVENUE-GIF-2.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-
 }
 
 .all_text {
@@ -135,6 +134,10 @@ body {
 
   .height_tel {
     height: 100vh;
+  }
+
+  .section_one {
+    margin-top: 2rem;
   }
 }
 

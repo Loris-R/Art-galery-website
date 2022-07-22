@@ -82,6 +82,7 @@ a:active,
 
   #nav_tel {
     display: block;
+    background-color: #f4f4f4;
   }
 
   li, .column {
@@ -145,5 +146,9 @@ a:active,
 
   .erase_lign {
     border-bottom: unset;
+  }
+
+  .navbar-nav {
+    background-color: #f4f4f4;
   }
 }
