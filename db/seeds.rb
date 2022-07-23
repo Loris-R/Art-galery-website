@@ -1,12 +1,12 @@
 puts "Seeds start"
 # destroy datas if development
 
-User.destroy_all
-Partner.destroy_all
-ArtFairExhibitor.destroy_all
-ArtFair.destroy_all
-DesignExhibitor.destroy_all
-Design.destroy_all
+User.destroy_all if Rails.env.development?
+Partner.destroy_all if Rails.env.development?
+ArtFairExhibitor.destroy_all if Rails.env.development?
+ArtFair.destroy_all if Rails.env.development?
+DesignExhibitor.destroy_all if Rails.env.development?
+Design.destroy_all if Rails.env.development?
 puts "destroyed datas if development environment"
 
 #create users
