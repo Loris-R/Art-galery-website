@@ -15,6 +15,7 @@ class RegistrationsController < ApplicationController
         RegistrationMailer.with(registration: @registration).new_register.deliver_now
         redirect_to art_fair_path
       else
+        RegistrationMailer.with(registration: @registration).new_register.deliver_now
         redirect_to design_path
       end
       flash[:notice] = "Thank you, your registration has been sent !"
