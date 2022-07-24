@@ -6,12 +6,12 @@ class RegistrationMailer < ApplicationMailer
   #   en.registration_mailer.new_register.subject
   #
   def new_register
-    @title = params[:title]
-    @first_name = params[:first_name]
-    @last_name = params[:last_name]
-    @email = params[:email]
-    @status = params[:status]
-    @category = params[:category]
+    @title = params[:registration][:title]
+    @first_name = params[:registration][:first_name]
+    @last_name = params[:registration][:last_name]
+    @email = params[:registration][:email]
+    @status = params[:registration][:status]
+    @category = params[:registration][:category]
 
     mail(to: "loris.reynaud@gmail.com", subject: 'Nouvelle inscription sur Bienvenue.art')
   end
