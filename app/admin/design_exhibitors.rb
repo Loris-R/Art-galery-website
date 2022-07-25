@@ -14,7 +14,7 @@ ActiveAdmin.register DesignExhibitor do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :design_id, :artist_name, :description, :url
+  permit_params :design_id, :artist_name, :description, :url, photos: []
   #
   # or
   #

@@ -15,7 +15,7 @@ ActiveAdmin.register ArtFairExhibitor do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :art_fair_id, :artist_name, :description, :url
+  permit_params :art_fair_id, :artist_name, :description, :url, photos: []
   #
   # or
   #
