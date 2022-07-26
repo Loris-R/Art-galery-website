@@ -1,9 +1,11 @@
- <%= render "shared/navbar" %>
- <section class="about_art">
-  <div class="descript">
-    <%= simple_format(@art_fair.description) %>
-  </div>
-  <div class="coordinates">
-    <%= simple_format(@art_fair.coordinates) %>
-  </div>
-</section>
+<div class="all_art">
+   <%= render "shared/navbar" %>
+   <section class="about_art">
+    <div class="descript">
+      <%= simple_format(@art_fair.description) %>
+    </div>
+    <div class="coordinates">
+      <%= simple_format(@art_fair.coordinates) %>
+    </div>
+  </section>
+</div>
