@@ -2,6 +2,77 @@ body {
   height: 100vh;
 }
 
+.b_around,
+.mover {
+  width: 2vw;
+}
+
+.b1 {
+  position: relative;
+  left: 60px;
+  top: 441px;
+}
+
+.b2 {
+  position: relative;
+  left: 509px;
+  top: 585px;
+}
+
+.b3 {
+  position: relative;
+  left: 115px;
+  top: 55px;
+}
+
+.b4 {
+  position: relative;
+  left: 179px;
+  top: 675px;
+}
+
+.b5 {
+  position: relative;
+  left: 566px;
+  top: 880px;
+}
+
+.b6 {
+  position: relative;
+  left: 1037px;
+  top: 513px;
+}
+
+.b7 {
+  position: relative;
+  left: 915px;
+  top: 642px;
+}
+
+.b8 {
+  position: relative;
+  left: 512px;
+  top: 768px;
+}
+
+.b9 {
+  position: relative;
+  left: 329px;
+  top: 621px;
+}
+
+.b10 {
+  position: relative;
+  left: 371px;
+  top: 139px;
+}
+
+.b11 {
+  position: relative;
+  left: 557px;
+  top: 598px;
+}
+
 #main-container {
   overflow-y: visible;
   position: relative;
@@ -20,18 +91,53 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 170vh;
-  width: 99vw;
-  padding: 0;
-  margin: 0;
+  height: 100vh;
+  width: 98vw;
 }
 
-.gif_home {
-  background-image: url(BIENVENUE-GIF-2.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.together {
+  position: relative;
+}
+
+#letter-b-wrapper {
   width: 100%;
+  z-index: 1;
+  perspective: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#letter-b {
+  width: 27rem;
+}
+
+.letter-b {
+  width: 2.25vw;
+  position: absolute;
+  pointer-events: none;
+}
+
+#letter-b.y-axis {
+  animation: y-axis-animation 5s infinite linear;
+}
+
+@keyframes y-axis-animation {
+  from {
+    transform: rotateY(180deg)
+  }
+
+  to {
+    transform: rotateY(-180deg)
+  }
+}
+
+#animation {
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
 }
 
 .all_text {
@@ -56,16 +162,10 @@ body {
   fill: #454040f5;
 }
 
-#email_art, #email_art_two {
+#email_art,
+#email_art_two {
   text-decoration: underline;
 }
-
-// .section_one {
-//   margin: 2.5vh 5vh 0 5vh;
-// }
-// .section_two_about {
-//   margin: 0 5vh 0 5vh;
-// }
 
 .section_two {
   margin-bottom: 4vw;
@@ -107,6 +207,14 @@ body {
 
 @media only screen and (min-width:279px) and (max-width:766px) {
 
+  #letter-b {
+    width: 19rem;
+  }
+
+  .letter-b {
+    width: 5.25vw;
+  }
+
   .all_text {
     height: auto;
     font-size: 13px;
@@ -135,13 +243,9 @@ body {
   .height_tel {
     height: 100vh;
   }
-
-  .section_one {
-    margin-top: 2rem;
-  }
 }
 
-@media only screen and (min-width:767px) and (max-width: 1200px){
+@media only screen and (min-width:767px) and (max-width: 1024px) {
   .all_text {
     height: auto;
   }
