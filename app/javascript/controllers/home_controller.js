@@ -1,16 +1,18 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["svg"]
+  static targets = ["canvas"]
 
   connect() {
-    const svg = this.svgTarget
-    const width = window.innerWidth;
-    console.log(width);
-    const height = window.innerHeight;
-    console.log(height);
+      const canvas = this.canvasTarget
+      const width = window.innerWidth;
+      const height = window.innerHeight;
 
-    svg.width = width;
-    svg.height = height;
+      canvas.width = width;
+      canvas.height = height;
+
+      const ctx = canvas.getContext('2d');
+    console.log(ctx);
+
   }
 }

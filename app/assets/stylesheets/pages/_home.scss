@@ -74,8 +74,10 @@ body {
 }
 
 #main-container {
-  overflow-y: visible;
-  position: relative;
+  // overflow-y: visible;
+  // position: relative;
+  overflow: hidden;
+  margin: 0;
 }
 
 #bienvenue-svg {
