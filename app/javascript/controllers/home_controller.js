@@ -1,9 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["canvas"]
+  static targets = ["canvas", "movingb"]
 
   connect() {
+    //get the width and height of the box
       const canvas = this.canvasTarget
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -11,8 +12,15 @@ export default class extends Controller {
       canvas.width = width;
       canvas.height = height;
 
-      const ctx = canvas.getContext('2d');
-    console.log(ctx);
+    // get the moving object
+    const movingb = this.movingbTarget
+    console.log(movingb)
+    // get there positions
+
+
+
+
+
 
   }
 }
