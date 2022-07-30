@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["canvas", "movingb"]
 
   connect() {
-    //get the width and height of the box make had bigger than the window
+    //get the width and height of the box make as bigger than the window
       const canvas = this.canvasTarget
       const width = window.innerWidth;
       const height = window.innerHeight;
