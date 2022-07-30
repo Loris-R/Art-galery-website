@@ -12,3 +12,6 @@ application.register("navbar", NavbarController)
 
 import ScrollTo from 'stimulus-scroll-to'
 application.register('scroll-to', ScrollTo)
+
+import HomeController from "./home_controller"
+application.register("home", HomeController)
