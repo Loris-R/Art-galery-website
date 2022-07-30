@@ -16,6 +16,10 @@ export default class extends Controller {
     const movingb = this.movingbTargets
     console.log(movingb)
     // get there positions
+    movingb.forEach( function positions(b) {
+      const position = b.getBoundingClientRect()
+      console.log(position)
+    })
 
 
 
