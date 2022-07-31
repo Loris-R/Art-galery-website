@@ -61,10 +61,10 @@
   </main>
   <main class="skew-scroll" style="transform: skewY(5.08047e-251deg);">
     <section class="all_text">
-      <div class="partner_display">
+      <div class="partner_display" id="partners_link">
         <div class="display_photos">
           <% @partner.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: "468px", width: "400px", class: "img_partner_juliette", id: "partners_link" %>
+            <%= cl_image_tag photo.key, height: "468px", width: "400px", class: "img_partner_juliette"%>
           <% end %>
         </div>
         <div class="margin_to_photo">

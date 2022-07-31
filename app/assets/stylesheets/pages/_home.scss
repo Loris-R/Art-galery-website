@@ -204,11 +204,11 @@ body {
   margin-bottom: 15vh;
 }
 
-@media only screen and (min-width:279px) and (max-width:766px) {
+@media only screen and (min-width:279px) and (max-width:850px) {
 
   .b_around,
     .mover {
-      width: 5.5vw;
+      width: 25px;
     }
 
   #letter-b {
@@ -250,17 +250,9 @@ body {
   }
 }
 
-@media only screen and (min-width:767px) and (max-width: 1024px) {
+@media only screen and (min-width:850px) and (max-width: 1100px) {
   .all_text {
     height: auto;
-  }
-
-  .partner_display {
-    display: unset;
-  }
-
-  .img_partner_juliette {
-    margin-bottom: 5vh;
   }
 
   .display_photos {
@@ -268,11 +260,16 @@ body {
     align-items: center;
   }
 
-  .height_tel {
-    height: 100vh;
-  }
-
   .logos {
     width: 7vw;
+  }
+
+  .b_around,
+  .mover {
+    width: 25px;
+  }
+
+  img {
+    width: unset;
   }
 }
