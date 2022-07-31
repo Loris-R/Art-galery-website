@@ -7,11 +7,9 @@ export default class extends Controller {
     const allSvg = this.svgTargets;
     
     allSvg.forEach((svg) => {
-      console.log("first");
       svgAnimation(svg);
 
       setInterval(function(){
-        console.log("interval");
         svgAnimation(svg);
       }, 15000);
 
