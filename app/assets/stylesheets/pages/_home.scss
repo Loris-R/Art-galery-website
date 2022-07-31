@@ -206,6 +206,11 @@ body {
 
 @media only screen and (min-width:279px) and (max-width:766px) {
 
+  .b_around,
+    .mover {
+      width: 5.5vw;
+    }
+
   #letter-b {
     width: 19rem;
   }
@@ -217,6 +222,7 @@ body {
   .all_text {
     height: auto;
     font-size: 13px;
+    margin-top: 33px;
   }
 
   .partner_display {

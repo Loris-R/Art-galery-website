@@ -47,7 +47,7 @@ export default class extends Controller {
 
     cross.addEventListener("click", function () {
       cross.classList.toggle("rotate");
-      aboutdown.style.height = "200px";
+      aboutdown.style.height = "230px";
     });
   }
 
