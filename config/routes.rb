@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
+  
   scope "(:locale)", locale: /en|fr/ do
     root to: "pages#home"
-  
     get "art-fair", to: "pages#art_fair"
     get "art-fair-programm", to: "pages#art_fair_programm"
     get "design", to: "pages#design"
