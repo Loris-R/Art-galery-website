@@ -8,7 +8,11 @@
           <% end %>
         </li>
         <li data-navbar-target="about">
-          <%= link_to "ABOUT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "35" } %>
+          <% if current_page?(root_path) %>
+            <%= link_to "ABOUT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "35" } %>
+          <% else %>
+            <%= link_to "ABOUT", root_path, data: { action: "click->navbar#link" } %>
+          <% end %>
           <%# <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="35">ABOUT</a> %>
         </li>
         <% if current_page?(root_path) %>
