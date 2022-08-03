@@ -8,11 +8,13 @@
           <% end %>
         </li>
         <li data-navbar-target="about">
-          <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="35">ABOUT</a>
+          <%= link_to "ABOUT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "35" } %>
+          <%# <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="35">ABOUT</a> %>
         </li>
         <% if current_page?(root_path) %>
           <li data-navbar-target="partners">
-            <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="140">PARTNERS</a>
+            <%= link_to "PARTNERS", root_path(anchor: "partners_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "140" } %>
+            <%# <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="140">PARTNERS</a> %>
           </li>
         <% end %>
     	  <li data-navbar-target="artfair">
@@ -30,7 +32,8 @@
           </li>
         <% end %>
         <li data-navbar-target="contact">
-          <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">CONTACT</a>
+          <%= link_to "CONTACT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "300" } %>
+          <%# <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">CONTACT</a> %>
         </li>
         <li  data-navbar-target="registration">
           <%= link_to "REGISTRATION", new_registration_path, class:"link" %>
