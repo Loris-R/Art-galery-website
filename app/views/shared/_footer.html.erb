@@ -1,6 +1,6 @@
 <footer id="footer">
   <div>
-    <a href="?lang=en">ENG</a>
+    <%= link_to "ENG", root_path(locale: "en") %>
   </div>
   <div>
     BIENVENUE —
@@ -28,7 +28,7 @@
     </a>
   </div>
   <div class="grid-item">
-    <a class="color_blue hover_red" href="?lang=fr">FR
+    <%= link_to "FR", root_path(locale: "fr"), class: "color_blue hover_red" %>
     </a>
   </div>
 </footer>
