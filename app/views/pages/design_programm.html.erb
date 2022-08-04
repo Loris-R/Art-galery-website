@@ -1,6 +1,10 @@
 <%= render "shared/navbar" %>
 <section class="about_art pro">
   <div>
-    <%= simple_format(@design.programm) %>
+    <% if params[:locale] == "en" || params[:locale].nil? %>
+      <%= simple_format(@design.programm_en) %>
+    <% else %>
+      <%= simple_format(@design.programm_fr) %>
+    <% end %>
   </div>
 </section>

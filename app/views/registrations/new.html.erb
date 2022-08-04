@@ -1,6 +1,6 @@
 <div class="registration_top">
   <%= link_to "< BACK", "javascript:history.back()" %>
-  <h1 class="registration_title"> REGISTRATION </h1>
+  <h1 class="registration_title"> <%= t("pages.registration.page_title") %> </h1>
   <div class="invisible_div"></div>
 </div>
 <div class="in_the_middle">
@@ -8,21 +8,21 @@
 <div style="height: 100%" class="comp_gif">
   <%= form_with model: @registration, method: :post, class: "registration-form" do |reg_form| %>
     <div class="registration-group group_one">
-      <%= reg_form.label "Select your title:", class: "underline" %>
+      <%= reg_form.label t("pages.registration.title"), class: "underline" %>
       <div class="registration-radio">
         <%= reg_form.collection_radio_buttons :title, @titles, :to_s, :to_s %>
       </div>
     </div>
     <div class="registration-group">
-      <%= reg_form.label "First name" %>
+      <%= reg_form.label t("pages.registration.first_name") %>
       <%= reg_form.text_field :first_name %>
     </div>
     <div class="registration-group">
-      <%= reg_form.label "Last name" %>
+      <%= reg_form.label t("pages.registration.last_name") %>
       <%= reg_form.text_field :last_name %>
     </div>
     <div class="registration-group group_four">
-      <%= reg_form.label "Select your status:", class: "underline" %>
+      <%= reg_form.label t("pages.registration.status"), class: "underline" %>
       <div class="registration-radio">
         <%= reg_form.collection_radio_buttons :status, @status, :to_s, :to_s %>
       </div>
@@ -32,12 +32,12 @@
       <%= reg_form.text_field :email %>
     </div>
     <div class="registration-group group_four">
-      <%= reg_form.label "Select your category:", class: "underline" %>
+      <%= reg_form.label t("pages.registration.category"), class: "underline" %>
       <div class="registration-radio">
         <%= reg_form.collection_radio_buttons :category, @categories, :to_s, :to_s %>
       </div>
     </div>
-    <%= reg_form.submit "SUBMIT", class: "button_sub" %>
+    <%= reg_form.submit t("pages.registration.submit"), class: "button_sub" %>
   <% end %>
 </div>
 </div>
