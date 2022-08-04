@@ -28,7 +28,7 @@
 }
 
 p:first-of-type {
-  margin-bottom: 4vh;
+  margin: 4vh;
 }
 
 p:nth-of-type(2) {
@@ -86,4 +86,8 @@ p:nth-of-type(3) {
   .coordinates-design {
     display: unset;
   }
+
+   .all_exhibitors {
+     margin-top: 6rem;
+   }
 }
