@@ -2,62 +2,65 @@
   <div id="nav_computer">
     <nav class="main-nav">
       <ul>
-        <li data-navbar-target="back">
-          <% unless current_page?(root_path) %>
+        <% unless current_page?(root_path) %>
+          <li data-navbar-target="back">
             <%= link_to "< BACK", "javascript:history.back()" %>
-          <% end %>
-        </li>
-        <li data-navbar-target="about">
-          <% if current_page?(root_path) %>
+          </li>
+        <% end %>
+        <% if current_page?(root_path) %>
+          <li data-navbar-target="about">
             <%= link_to t("navbar.about"), root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "35" } %>
-          <% else %>
-            <%= link_to t("navbar.about"), root_path, data: { action: "click->navbar#link" } %>
-          <% end %>
-        </li>
+          </li>
+        <% end %>
         <% if current_page?(root_path) %>
           <li data-navbar-target="partners">
             <%= link_to t("navbar.partner"), root_path(anchor: "partners_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "140" } %>
           </li>
         <% end %>
-    	  <li data-navbar-target="artfair">
-          <%= link_to 'Bienvenue Art Fair', art_fair_path %>
-        </li>
-        <% if current_page?("/art-fair") || current_page?("/art-fair-programm") %>
-          <li style="width: 57.1px">
+        <% unless current_page?(design_path) || current_page?(design_programm_path) %>
+          <li data-navbar-target="artfair">
+            <%= link_to 'Bienvenue Art Fair', art_fair_path %>
           </li>
         <% end %>
-    	  <li data-navbar-target="design">
-          <%= link_to 'Bienvenue Design', design_path %>
-        </li>
-        <% if current_page?("/design") || current_page?("/design-programm") %>
-          <li style="width: 57.1px">
+        <% if request.original_url.include?("art-fair") %>
+          <li style="width: 57.1px"></li>
+        <% end %>
+        <% unless current_page?(art_fair_path) || current_page?(art_fair_programm_path) %>
+          <li data-navbar-target="design">
+            <%= link_to 'Bienvenue Design', design_path %>
           </li>
         <% end %>
-        <li data-navbar-target="contact">
-          <%= link_to "CONTACT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "300" } %>
-          <%# <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">CONTACT</a> %>
-        </li>
-        <li  data-navbar-target="registration">
-          <%= link_to t("navbar.registration"), new_registration_path, class:"link" %>
-        </li>
+        <% if request.original_url.include?("design") %>
+          <li style="width: 57.1px"></li>
+        <% end %>
+        <% if current_page?(root_path) %>
+          <li data-navbar-target="contact">
+            <%= link_to "CONTACT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "300" } %>
+          </li>
+        <% end %>
+        <% if current_page?(root_path) %>
+          <li  data-navbar-target="registration">
+            <%= link_to t("navbar.registration"), new_registration_path, class:"link" %>
+          </li>
+        <% end %>
       </ul>
     </nav>
     <% unless current_page?(root_path) %>
       <nav class="main-nav">
         <ul class="navbar_down">
-          <% if current_page?("/art-fair") || current_page?("/art-fair-exhibitors") || current_page?("/art-fair-programm") %>
+          <% if request.original_url.include?("art-fair") %>
             <li>
               <%= link_to t("navbar.exhibitors"), art_fair_exhibitors_path, class:"link" %>
             </li>
             <li>
-              <%= link_to t("navbar.programm"), "/art-fair-programm", class:"link" %>
+              <%= link_to t("navbar.programm"), art_fair_programm_path, class:"link" %>
             </li>
           <% else %>
             <li>
               <%= link_to t("navbar.exhibitors"), design_exhibitors_path, class:"link" %>
             </li>
             <li>
-              <%= link_to t("navbar.programm"), "/design-programm", class:"link" %>
+              <%= link_to t("navbar.programm"), design_programm_path, class:"link" %>
             </li>
           <% end %>
         </ul>
@@ -65,7 +68,7 @@
     <% end %>
   </div>
   <div class="header nav_height" id="nav_tel">
-    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page?(root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
+    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
       <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
       </li>

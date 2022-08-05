@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :art_fair, :art_fair_programm, :design, :design_programm]
 
   def home
+    if params[:locale].nil?
+      redirect_to "/en"
+    end
     @partner = Partner.all.last
   end
 
