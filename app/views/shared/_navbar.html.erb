@@ -9,12 +9,12 @@
         <% end %>
         <% if current_page?(root_path) %>
           <li data-navbar-target="about">
-            <%= link_to t("navbar.about"), root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "35" } %>
+            <%= link_to t("navbar.about"), "#about_link", data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "35" } %>
           </li>
         <% end %>
         <% if current_page?(root_path) %>
           <li data-navbar-target="partners">
-            <%= link_to t("navbar.partner"), root_path(anchor: "partners_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "140" } %>
+            <%= link_to t("navbar.partner"), "#partners_link", data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "140" } %>
           </li>
         <% end %>
         <% unless current_page?(design_path) || current_page?(design_programm_path) %>
@@ -35,7 +35,7 @@
         <% end %>
         <% if current_page?(root_path) %>
           <li data-navbar-target="contact">
-            <%= link_to "CONTACT", root_path(anchor: "about_link"), data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "300" } %>
+            <%= link_to "CONTACT", "#contact_link", data: { action: "click->navbar#link", controller: "scroll-to", scrollToOffsetValue: "300" } %>
           </li>
         <% end %>
         <% if current_page?(root_path) %>
