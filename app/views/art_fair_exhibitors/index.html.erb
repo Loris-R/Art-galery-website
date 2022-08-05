@@ -29,9 +29,9 @@
       </div>
       <div class="text">
         <% if params[:locale] == "en" || params[:locale].nil? %>
-          <%= a_exhib.description_en.nil? ? simple_format(a_exhib.description_fr) : simple_format(a_exhib.description_en) %>
+          <%= simple_format(a_exhib.description_en) %>
         <% else %>
-          <%= a_exhib.description_fr.nil? ? simple_format(a_exhib.description_en) : simple_format(a_exhib.description_fr) %>
+          <%= simple_format(a_exhib.description_fr) %>
         <% end %>
         <%= link_to a_exhib.url, "http://#{a_exhib.url}" %>
       </div>

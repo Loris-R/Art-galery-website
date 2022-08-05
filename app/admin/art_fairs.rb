@@ -4,8 +4,10 @@ ActiveAdmin.register ArtFair do
 
   index do
     selectable_column
-    column :description
-    column :programm
+    column :description_en
+    column :description_fr
+    column :programm_en
+    column :programm_fr
     column :coordinates
     actions
   end
@@ -14,7 +16,7 @@ ActiveAdmin.register ArtFair do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :description, :programm, :coordinates
+  permit_params :description_en, :description_fr, :programm_en, :programm_fr, :coordinates
   #
   # or
   #
@@ -23,5 +25,16 @@ ActiveAdmin.register ArtFair do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  form do |f|
+    f.inputs "Art fair" do
+      f.input :description_en
+      f.input :description_fr
+      f.input :programm_en
+      f.input :programm_fr
+      f.input :coordinates
+    end
+    f.actions
+  end
   
 end

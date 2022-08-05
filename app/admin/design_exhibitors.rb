@@ -4,7 +4,8 @@ ActiveAdmin.register DesignExhibitor do
     selectable_column
     column :id
     column :artist_name
-    column :description
+    column :description_en
+    column :description_fr
     column :url
     column :created_at
     actions
@@ -14,7 +15,7 @@ ActiveAdmin.register DesignExhibitor do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :design_id, :artist_name, :description, :url, photos: []
+  permit_params :design_id, :artist_name, :description_en, :description_fr, :url, photos: []
   #
   # or
   #
@@ -28,7 +29,8 @@ ActiveAdmin.register DesignExhibitor do
     f.inputs "Design Exhibitor" do
       f.hidden_field :design_id, value: Design.all.last.nil? ? nil : Design.all.last.id
       f.input :artist_name
-      f.input :description
+      f.input :description_en
+      f.input :description_fr
       f.input :url
       f.inputs "Ajoutez des photos" do
         f.input :photos, as: :file, input_html: { multiple: true }
