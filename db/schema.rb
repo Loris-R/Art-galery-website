@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_18_162502) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_04_100450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,43 +59,50 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_18_162502) do
   create_table "art_fair_exhibitors", force: :cascade do |t|
     t.bigint "art_fair_id", null: false
     t.string "artist_name"
-    t.text "description"
+    t.text "description_en"
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description_fr"
     t.index ["art_fair_id"], name: "index_art_fair_exhibitors_on_art_fair_id"
   end
 
   create_table "art_fairs", force: :cascade do |t|
-    t.text "description"
-    t.text "programm"
+    t.text "description_en"
+    t.text "programm_en"
     t.text "coordinates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description_fr"
+    t.text "programm_fr"
   end
 
   create_table "design_exhibitors", force: :cascade do |t|
     t.bigint "design_id", null: false
     t.string "artist_name"
-    t.text "description"
+    t.text "description_en"
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description_fr"
     t.index ["design_id"], name: "index_design_exhibitors_on_design_id"
   end
 
   create_table "designs", force: :cascade do |t|
-    t.text "description"
-    t.text "programm"
+    t.text "description_en"
+    t.text "programm_en"
     t.text "coordinates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description_fr"
+    t.text "programm_fr"
   end
 
   create_table "partners", force: :cascade do |t|
-    t.text "description"
+    t.text "description_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description_fr"
   end
 
   create_table "registrations", force: :cascade do |t|

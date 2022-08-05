@@ -5,7 +5,7 @@ ActiveAdmin.register Partner do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :description, photos: []
+  permit_params :description_en, :description_fr, photos: []
   #
   # or
   #
@@ -17,7 +17,8 @@ ActiveAdmin.register Partner do
   
   form do |f|
     f.inputs "Partenaire" do
-      f.input :description
+      f.input :description_en
+      f.input :description_fr
     end
     f.inputs "Ajoutez des photos" do
       f.input :photos, as: :file, input_html: { multiple: true }

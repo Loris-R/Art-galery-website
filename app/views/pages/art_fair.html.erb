@@ -1,9 +1,15 @@
 <div class="all_art">
    <%= render "shared/navbar" %>
    <section class="about_art">
-    <div class="descript">
-      <%= simple_format(@art_fair.description) %>
-    </div>
+    <% if params[:locale] == "en" || params[:locale].nil? %>
+      <div class="descript">
+        <%= simple_format(@art_fair.description_en) %>
+      </div>
+    <% else %>
+      <div class="descript">
+        <%= simple_format(@art_fair.description_fr) %>
+      </div>
+    <% end %>
     <div class="coordinates">
       <%= simple_format(@art_fair.coordinates) %>
     </div>

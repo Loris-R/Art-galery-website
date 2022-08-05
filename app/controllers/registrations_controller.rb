@@ -2,8 +2,14 @@ class RegistrationsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def new
-    @titles = Registration::TITLES
-    @status = Registration::STATUS
+    if params[:locale] == "en" || params[:locale].nil?
+      @titles = Registration::TITLES_EN
+      @status = Registration::STATUS_EN
+    else
+      @titles = Registration::TITLES_FR
+      @status = Registration::STATUS_FR
+    end
+    
     @categories = Registration::CATEGORIES
     @registration = Registration.new
   end

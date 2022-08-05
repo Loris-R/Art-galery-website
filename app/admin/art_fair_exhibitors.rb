@@ -4,7 +4,8 @@ ActiveAdmin.register ArtFairExhibitor do
     selectable_column
     column :id
     column :artist_name
-    column :description
+    column :description_en
+    column :description_fr
     column :url
     column :created_at
     actions
@@ -15,7 +16,7 @@ ActiveAdmin.register ArtFairExhibitor do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :art_fair_id, :artist_name, :description, :url, photos: []
+  permit_params :art_fair_id, :artist_name, :description_en, :description_fr, :url, photos: []
   #
   # or
   #
@@ -29,7 +30,8 @@ ActiveAdmin.register ArtFairExhibitor do
     f.inputs "Art fair Exhibitor" do
       f.hidden_field :art_fair_id, value: ArtFair.all.last.nil? ? nil : ArtFair.all.last.id
       f.input :artist_name
-      f.input :description
+      f.input :description_en
+      f.input :description_fr
       f.input :url
       f.inputs "Ajoutez des photos" do
         f.input :photos, as: :file, input_html: { multiple: true }

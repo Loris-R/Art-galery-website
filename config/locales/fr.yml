@@ -1,0 +1,20 @@
+fr:
+  navbar:
+    about: "A PROPOS"
+    partner: "PARTENAIRES"
+    registration: "INSCRIPTION"
+    exhibitors: "EXPOSANTS"
+    programm: "PROGRAMME"
+
+  pages:
+    home:
+      about: "BIENVENUE est une plateforme événementielle qui vise à proposer un format alternatif d'expérience de visionnage de la foire, en mettant en relation galeries, professionnels et industries de l'art avec les collectionneurs et les amateurs, d'une manière qui repense le rôle de la foire sous les termes d'un dialogue ouvert.
+         Dans un esprit de décloisonnement, BIENVENUE déploie ses actions dans les domaines de l'Art Contemporain, du Design, des Arts Appliqués et Décoratifs. Il se tient cinq fois par an, alternant ses éditions entre design et art contemporain."
+    registration:
+      page_title: "INSCRIPTION"
+      title: "SELECTIONNEZ UN TITRE"
+      first_name: "PRENOM"
+      last_name: "NOM"
+      status: "SELECTIONNEZ UN STATUS"
+      category: "SELECTIONNEZ UNE CATEGORIE"
+      submit: "SOUMETTRE"
