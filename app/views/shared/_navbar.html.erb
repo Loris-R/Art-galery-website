@@ -22,7 +22,7 @@
             <%= link_to 'Bienvenue Art Fair', art_fair_path %>
           </li>
         <% end %>
-        <% if request.original_url.include?("art-fair") %>
+        <% if request.original_url.include?("art_fair") %>
           <li style="width: 57.1px"></li>
         <% end %>
         <% unless current_page?(art_fair_path) || current_page?(art_fair_programm_path) %>
@@ -48,7 +48,7 @@
     <% unless current_page?(root_path) %>
       <nav class="main-nav">
         <ul class="navbar_down">
-          <% if request.original_url.include?("art-fair") %>
+          <% if request.original_url.include?("art_fair") %>
             <li>
               <%= link_to t("navbar.exhibitors"), art_fair_exhibitors_path, class:"link" %>
             </li>
@@ -68,7 +68,7 @@
     <% end %>
   </div>
   <div class="header nav_height" id="nav_tel">
-    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
+    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %>">
       <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
       </li>
@@ -109,19 +109,19 @@
     </ul>
     <% unless current_page?(root_path) %>
       <ul class="navbar_down down_border_tel">
-        <% if request.original_url.include?("art-fair") %>
+        <% if request.original_url.include?("art_fair") %>
           <li>
             <%= link_to t("navbar.exhibitors"), art_fair_exhibitors_path, class:"link" %>
           </li>
           <li>
-            <%= link_to t("navbar.programm"), "/art-fair-programm", class:"link" %>
+            <%= link_to t("navbar.programm"), art_fair_programm_path, class:"link" %>
           </li>
         <% elsif request.original_url.include?("design") %>
           <li>
             <%= link_to t("navbar.exhibitors"), design_exhibitors_path, class:"link" %>
           </li>
           <li>
-            <%= link_to t("navbar.programm"), "/design-programm", class:"link" %>
+            <%= link_to t("navbar.programm"), design_programm_path, class:"link" %>
           </li>
         <% end %>
       </ul>
