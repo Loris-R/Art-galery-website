@@ -15,7 +15,7 @@
   </div>
 <% else %>
   <% @art_fair_exhibitors.each do |a_exhib| %>
-    <div>
+    <div class="artist-<%= index %>">
       <div class="artist_name">
         <%= simple_format(a_exhib.artist_name) %>
       </div>

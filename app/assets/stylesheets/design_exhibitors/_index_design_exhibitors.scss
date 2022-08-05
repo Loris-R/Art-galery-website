@@ -5,6 +5,10 @@
   font-size: 1.4rem;
 }
 
+.artist-1 {
+  margin-top: 3rem;
+}
+
 .pics {
   display: grid;
   grid-template-columns: repeat(3, 300px);
@@ -74,7 +78,7 @@
 
   .artist_name {
     font-size: 1.2rem;
-    padding: 2rem 2rem 0 2rem;
+    padding: 3rem 2rem 0 2rem;
   }
 
   .pics {
@@ -96,7 +100,7 @@
 
   .stick {
     position: fixed;
-    top: 5.8%;
+    top: 7.5%;
     width: 100%;
   }
 
@@ -117,7 +121,7 @@
   }
 
   .artist-1 {
-    margin-top: 14vh;
+    margin-top: 6rem;
   }
 }
 
@@ -131,10 +135,6 @@
   .pics_divs {
     height: 59vh;
     width: 85%;
-  }
-
-  .artist-1 {
-    margin-top: 7vh;
   }
 
   .text {

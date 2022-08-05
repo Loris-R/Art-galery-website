@@ -54,11 +54,13 @@
           <% end %>
         </div>
         <div class="margin_to_photo">
-          <% if params[:locale] == "en" || params[:locale].nil? %>
-            <%= simple_format(@partner.description_en) %>
-          <% else %>
-            <%= simple_format(@partner.description_fr) %>
-          <% end %>
+          <div class="middle">
+            <% if params[:locale] == "en" || params[:locale].nil? %>
+              <%= simple_format(@partner.description_en) %>
+            <% else %>
+              <%= simple_format(@partner.description_fr) %>
+            <% end %>
+          </div>
         </div>
       </div>
     </section>
@@ -66,14 +68,14 @@
   <section class="all_text border height_tel">
     <div style="transform: skewY(5.08047e-251deg);">
       <div class="logos_lign">
-		    <p id="contact_link"><%= link_to "http://instagram.com/bienvenue.art"  do %>
+		    <div id="contact_link"><%= link_to "http://instagram.com/bienvenue.art"  do %>
             <%= image_tag "instagram-logo.png", :class => "logos insta" %>
            <% end %>
-		  	</p>
-        <p><%= mail_to "info@bienvenue.art" do %>
+		  	</div>
+        <div class="mail_logo"><%= mail_to "info@bienvenue.art" do %>
             <%= image_tag "email.png", :class => "logos" %>
            <% end %>
-		  	</p>
+		  	</div>
       </div>
 		  <div>
 			  BIENVENUE – HOTEL LA LOUISIANE<br>

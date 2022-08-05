@@ -45,7 +45,7 @@
     <% unless current_page?(root_path) %>
       <nav class="main-nav">
         <ul class="navbar_down">
-          <% if current_page?("/art-fair") %>
+          <% if current_page?("/art-fair") || current_page?("/art-fair-exhibitors") || current_page?("/art-fair-programm") %>
             <li>
               <%= link_to t("navbar.exhibitors"), art_fair_exhibitors_path, class:"link" %>
             </li>
@@ -65,7 +65,7 @@
     <% end %>
   </div>
   <div class="header nav_height" id="nav_tel">
-    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
+    <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page?(root_path) %> <%= "erase_lign" if current_page?(design_exhibitors_path) || current_page?(art_fair_exhibitors_path) %>">
       <li class="align_icon">
         <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
       </li>
