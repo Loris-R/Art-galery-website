@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
     scope "(:locale)", locale: /en|fr/ do
     root to: "pages#home"
-    get "art-fair", to: "pages#art_fair"
-    get "art-fair-programm", to: "pages#art_fair_programm"
+    get "art_fair", to: "pages#art_fair"
+    get "art_fair-programm", to: "pages#art_fair_programm"
     get "design", to: "pages#design"
     get "design-programm", to: "pages#design_programm"
 
