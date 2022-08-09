@@ -50,7 +50,7 @@
       <div class="partner_display" id="partners_link">
         <div class="display_photos">
           <% @partner.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: "468px", width: "400px", class: "img_partner_juliette"%>
+            <%= cl_image_tag photo.key, width: "400px", class: "img_partner_juliette"%>
           <% end %>
         </div>
         <div class="margin_to_photo">
