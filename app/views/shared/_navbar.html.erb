@@ -9,12 +9,12 @@
         <% end %>
         <% if current_page?(root_path) %>
           <li data-navbar-target="about">
-            <%= link_to t("navbar.about"), "#about_link", data: { action: "click->navbar#link", controller: "scroll-to", scroll_to_offset_value: "35" } %>
+            <%= link_to t("navbar.about"), "#about_link", data: { action: "click->navbar#link", controller: "scroll-to", scroll_to_offset_value: "0" } %>
           </li>
         <% end %>
         <% if current_page?(root_path) %>
           <li>
-            <%= link_to t("navbar.partner"), "#partners_link", data: { action: "click->navbar#link", controller: "scroll-to", scroll_to_offset_value: "100" } %>
+            <%= link_to t("navbar.partner"), "#partners_link", data: { action: "click->navbar#link", controller: "scroll-to", scroll_to_offset_value: "145" } %>
           </li>
         <% end %>
         <% unless current_page?(design_path) || current_page?(design_programm_path) %>
@@ -83,7 +83,7 @@
             </li>
             <li>
               <% if current_page?(root_path) %>
-                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="70">PARTNERS</a>
+                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="110">PARTNERS</a>
               <% else %>
                 <%= link_to t("navbar.partner"), root_path, class: "link" %>
               <% end %>
