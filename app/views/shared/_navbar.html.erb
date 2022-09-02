@@ -75,17 +75,17 @@
         <div class="column slide" data-navbar-target="aboutdown">
           <ul class="list_menu_column">
             <li>
-              <% if current_page?(root_path) %>
-                <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">ABOUT</a>
+              <% unless current_page?(root_path) %>
+                <%= link_to t("navbar.about"), root_path + href="#about_link", class: "link" %>
               <% else %>
-                <%= link_to t("navbar.about"), root_path, class: "link" %>
+                <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">ABOUT</a>
               <% end %>
             </li>
             <li>
-              <% if current_page?(root_path) %>
-                <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="85">PARTNERS</a>
+              <% unless current_page?(root_path) %>
+                <%= link_to t("navbar.partner"), root_path + href="#partners_link", class: "link" %>
               <% else %>
-                <%= link_to t("navbar.partner"), root_path, class: "link" %>
+                 <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="73">PARTNERS</a>
               <% end %>
             </li>
             <li>
@@ -95,10 +95,10 @@
               <%= link_to 'Bienvenue Design', design_path, class:"link" %>
             </li>
             <li>
-              <% if current_page?(root_path) %>
-                <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">CONTACT</a>
+              <% unless current_page?(root_path) %>
+                <%= link_to "CONTACT", root_path + href="#contact_link", class: "link" %>
               <% else %>
-                <%= link_to "CONTACT", root_path, class: "link" %>
+                <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">CONTACT<a>
               <% end %>
             </li>
             <li>
