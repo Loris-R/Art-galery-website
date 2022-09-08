@@ -209,6 +209,19 @@ body {
   margin-bottom: 15vh;
 }
 
+.arrow {
+  width: 13px;
+}
+
+.dates-two {
+  margin-bottom: 5rem;
+}
+
+.dates-one, .dates-two {
+  text-align: center;
+  font-size: larger;
+}
+
 @media only screen and (min-width:279px) and (max-width:849px) {
 
   .b_around,
