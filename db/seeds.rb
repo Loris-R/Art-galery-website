@@ -2,7 +2,6 @@ puts "Seeds start"
 # destroy datas if development
 
 User.destroy_all if Rails.env.development?
-About.destroy_all if Rails.env.development?
 Partner.destroy_all if Rails.env.development?
 ArtFairExhibitor.destroy_all if Rails.env.development?
 ArtFair.destroy_all if Rails.env.development?
@@ -22,19 +21,6 @@ User.create!(
 )
 puts "Olivier, Lolo & Rika created !"
 
-#create About
-
-about = About.new(
-  first_description: "BIENVENUE is an events platform which aims to offer an alternative fair viewing experience format, by connecting galleries, professionals and art industries with both collectors and amateurs in a way that rethinks the role of the fair under the terms of an open dialogue.",
-  second_description: "In a spirit of decompartmentalization, BIENVENUE deploys its actions in the fields of Contemporary Art, Design, Applied and Decorative Arts. It's held five times a year, alternating its editions between design and contemporary art.",
-  expo_category_fair: "BIENVENUE Art Fair",
-  date_fair: "October 20 - 23, 2022",
-  expo_category_design: "BIENVENUE Design",
-  date_design: "September 8 - 11, 2022"
-)
-
-about.save!
-puts "About test created !"
 
 #create Partner
 

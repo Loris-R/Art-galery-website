@@ -26,9 +26,9 @@ ActiveAdmin.register About do
     f.actions
   end
 
-   permit_params do
-     permitted = [:first_description_en, :second_description_en, :expo_category_fair_en, :expo_category_design_en, :date_design_en, :date_fair_en, :first_description_fr, :second_description_fr, :expo_category_fair_fr, :expo_category_design_fr, :date_design_fr, :date_fair_fr]
-     permitted << :other if params[:action] == 'create' && current_user.admin?
-     permitted
-   end
+  # permit_params do
+  #   permitted = [:first_description_en, :second_description_en, :expo_category_fair_en, :expo_category_design_en, :date_design_en, :date_fair_en, :first_description_fr, :second_description_fr, :expo_category_fair_fr, :expo_category_design_fr, :date_design_fr, :date_fair_fr]
+  #  permitted << :other if params[:action] == 'create' && current_user.admin?
+  #  permitted
+  # end
 end
