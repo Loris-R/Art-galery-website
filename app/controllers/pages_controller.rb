@@ -6,6 +6,7 @@ class PagesController < ApplicationController
       redirect_to "/en"
     end
     @partner = Partner.all.last
+    @about = About.all.last
   end
 
   def art_fair

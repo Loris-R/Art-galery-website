@@ -7,9 +7,6 @@ fr:
     programm: "PROGRAMME"
 
   pages:
-    home:
-      about_p_one: "BIENVENUE est une plateforme événementielle qui propose un format alternatif de regard sur les foires, en connectant les galeries, les professionnels et les industries de l'art avec les collectionneurs et les amateurs d'une manière qui repense le rôle des salons dans le cadre d'un dialogue ouvert."
-      about_p_two: "Dans un esprit de décloisonnement, BIENVENUE déploie ses actions dans les domaines de l'art contemporain, du design, des arts appliqués et décoratifs. Elle se déroule cinq fois par an, alternant ses éditions entre le design et l'art contemporain."
     registration:
       page_title: "INSCRIPTION"
       title: "SELECTIONNEZ UN TITRE"
