@@ -41,11 +41,29 @@
   <main class="skew-scroll"  id="about_link">
     <section class="all_text">
       <div class="section_one">
-      <div class="dates-one"> BIENVENUE Design <%= image_tag "right-arrow.png", :class => "arrow" %> September 8 - 11, 2022</div>
-      <div class="dates-two"> BIENVENUE Art Fair <%= image_tag "right-arrow.png", :class => "arrow" %> October 20 - 23, 2022</div>
-        <p><%= t("pages.home.about_p_one") %></p>
-        <br>
-        <p><%= t("pages.home.about_p_two") %></p>
+        <% if params[:locale] == "en" || params[:locale].nil? %>
+          <div class="dates-one">
+            <%= simple_format(@about.expo_category_design_en, html_options = {class: "space"})%>
+            <%= image_tag "right-arrow.png", :class => "arrow space" %>
+            <%= image_tag "arrow_tel.png", :class => "arrow_tel space" %>
+            <%= simple_format(@about.date_design_en, html_options = {class: "space space_tel"}) %>
+          </div>
+          <div class="dates-two">
+            <%= simple_format(@about.expo_category_fair_en, html_options = {class: "space"}) %>
+            <%= image_tag "right-arrow.png", :class => "arrow space" %>
+            <%= image_tag "arrow_tel.png", :class => "arrow_tel space" %>
+            <%= simple_format(@about.date_fair_en, html_options = {class: "space space_tel"}) %></div>
+          </div>
+          <p><%= simple_format(@about.first_description_en) %></p>
+          <br>
+          <p><%= simple_format(@about.second_description_en) %></p>
+        <% else %>
+          <div class="dates-one"> <%= simple_format(@about.expo_category_design_fr) %> <%= image_tag "right-arrow.png", :class => "arrow" %> <%= simple_format(@about.date_design_fr) %></div>
+          <div class="dates-two"> <%= simple_format(@about.expo_category_fair_fr) %> <%= image_tag "right-arrow.png", :class => "arrow" %> <%= simple_format(@about.date_fair_fr) %></div>
+          <p><%= simple_format(@about.first_description_fr) %></p>
+          <br>
+          <p><%= simple_format(@about.second_description_fr) %></p>
+        <% end %>
       </div>
     </section>
   </main>

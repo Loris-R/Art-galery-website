@@ -21,6 +21,7 @@ User.create!(
 )
 puts "Olivier, Lolo & Rika created !"
 
+
 #create Partner
 
 partner = Partner.new(
