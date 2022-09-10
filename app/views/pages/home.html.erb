@@ -43,23 +43,29 @@
       <div class="section_one">
         <% if params[:locale] == "en" || params[:locale].nil? %>
           <div class="dates-one">
-            <%= simple_format(@about.expo_category_design_en, html_options = {class: "space"})%>
+            <div class="space"> BIENVENUE Design </div>
             <%= image_tag "right-arrow.png", :class => "arrow space" %>
-            <%= image_tag "arrow_tel.png", :class => "arrow_tel space" %>
             <%= simple_format(@about.date_design_en, html_options = {class: "space space_tel"}) %>
           </div>
           <div class="dates-two">
-            <%= simple_format(@about.expo_category_fair_en, html_options = {class: "space"}) %>
+            <div class="space"> BIENVENUE Art Fair </div>
             <%= image_tag "right-arrow.png", :class => "arrow space" %>
-            <%= image_tag "arrow_tel.png", :class => "arrow_tel space" %>
-            <%= simple_format(@about.date_fair_en, html_options = {class: "space space_tel"}) %></div>
+            <%= simple_format(@about.date_fair_en, html_options = {class: "space space_tel"}) %>
           </div>
           <p><%= simple_format(@about.first_description_en) %></p>
           <br>
           <p><%= simple_format(@about.second_description_en) %></p>
         <% else %>
-          <div class="dates-one"> <%= simple_format(@about.expo_category_design_fr) %> <%= image_tag "right-arrow.png", :class => "arrow" %> <%= simple_format(@about.date_design_fr) %></div>
-          <div class="dates-two"> <%= simple_format(@about.expo_category_fair_fr) %> <%= image_tag "right-arrow.png", :class => "arrow" %> <%= simple_format(@about.date_fair_fr) %></div>
+          <div class="dates-one">
+            <div class="space"> BIENVENUE Design </div>
+            <%= image_tag "right-arrow.png", :class => "arrow space" %>
+            <%= simple_format(@about.date_design_fr, html_options = {class: "space space_tel"}) %>
+          </div>
+          <div class="dates-two">
+            <div class="space"> BIENVENUE Art Fair </div>
+            <%= image_tag "right-arrow.png", :class => "arrow space" %>
+            <%= simple_format(@about.date_fair_fr, html_options = {class: "space space_tel"}) %>
+          </div>
           <p><%= simple_format(@about.first_description_fr) %></p>
           <br>
           <p><%= simple_format(@about.second_description_fr) %></p>

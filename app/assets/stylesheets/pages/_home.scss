@@ -228,10 +228,6 @@ body {
   margin: 0 0.5rem;
 }
 
-.arrow_tel {
-  display: none;
-}
-
 @media only screen and (min-width:279px) and (max-width:849px) {
 
   .b_around,
@@ -292,12 +288,6 @@ body {
     width: 90%;
   }
 
-  .arrow_tel {
-    display: block;
-    width: 15px;
-    margin: 5px 50%;
-  }
-
   .arrow {
     display: none;
   }
@@ -309,6 +299,10 @@ body {
 
   .space_tel {
     margin-bottom: 2rem;
+  }
+
+  .space {
+    font-size: medium;
   }
 }
 

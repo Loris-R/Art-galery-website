@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_09_100403) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_10_071414) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,12 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_09_100403) do
     t.string "second_description_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "expo_category_fair_en"
-    t.string "expo_category_design_en"
     t.string "date_design_en"
     t.string "date_fair_en"
-    t.string "expo_category_design_fr"
-    t.string "expo_category_fair_fr"
     t.string "date_design_fr"
     t.string "date_fair_fr"
     t.string "first_description_fr"
