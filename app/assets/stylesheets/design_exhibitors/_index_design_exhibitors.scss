@@ -9,15 +9,6 @@
   margin-top: 3rem;
 }
 
-.pics {
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: minmax(300px, auto);
-  grid-auto-flow: row dense;
-  justify-content: center;
-  width: 100%;
-  gap: 15px;
-}
 
 .text {
   display: flex;

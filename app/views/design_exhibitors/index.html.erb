@@ -18,14 +18,14 @@
         <%= simple_format(d_exhib.artist_name, class: "artist-#{artist_nb}") %>
       </div>
       <% artist_nb += 1 %>
-      <div class="flex_middle">
-        <div class="pics">
+      <% if   d_exhib.photo.url.present?  %>
+        <div class="flex_middle">
           <% d_exhib.photos.each do |photo| %>
             <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>)">
             </div>
           <% end %>
         </div>
-      </div>
+      <% end %>
       <div class="text">
         <% if params[:locale] == "en" || params[:locale].nil? %>
           <%= d_exhib.description_en.nil? ? simple_format(d_exhib.description_fr) : simple_format(d_exhib.description_en) %>

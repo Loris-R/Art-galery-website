@@ -1,4 +1,4 @@
 class ArtFairExhibitor < ApplicationRecord
-  has_many_attached :photos
+  has_one_attached :photo
   belongs_to :art_fair
 end
