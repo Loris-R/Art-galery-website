@@ -19,14 +19,12 @@
       </div>
       <% artist_nb += 1 %>
       <% if   d_exhib.photo.url.present?  %>
-      <div class="flex_middle">
-        <div class="pics">
+        <div class="flex_middle">
           <% d_exhib.photos.each do |photo| %>
             <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>)">
             </div>
           <% end %>
         </div>
-      </div>
       <% end %>
       <div class="text">
         <% if params[:locale] == "en" || params[:locale].nil? %>
