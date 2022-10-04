@@ -16,7 +16,7 @@
       <div class="artist_name">
         <%= simple_format(a_exhib.artist_name) %>
       </div>
-      <% if   d_exhib.photo.url.present?  %>
+      <% if a_exhib.photo.url.present?  %>
         <div class="flex_middle">
           <% a_exhib.photos.each do |photo| %>
             <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>)">
