@@ -11,19 +11,13 @@
     <p class="come">COMING SOON</p>
   </div>
 <% else %>
-  <% artist_nb = 1 %>
   <% @design_exhibitors.each do |d_exhib| %>
-    <div class="all_exhibitors">
       <div class="artist_name">
-        <%= simple_format(d_exhib.artist_name, class: "artist-#{artist_nb}") %>
+        <%= simple_format(d_exhib.artist_name, class: ("artist-1" if d_exhib == @design_exhibitors.first)) %>
       </div>
-      <% artist_nb += 1 %>
-      <% if   d_exhib.photo.url.present?  %>
-        <div class="flex_middle">
-          <% d_exhib.photos.each do |photo| %>
-            <div class="pics_divs" style="background-image: url(<%= cl_image_path(photo.key) %>)">
-            </div>
-          <% end %>
+      <% if d_exhib.photo.attached? %>
+        <div class="exhibitor-image">
+          <%= cl_image_tag d_exhib.photo.key, width: 800, crop: :fill %>
         </div>
       <% end %>
       <div class="text">
@@ -34,6 +28,5 @@
         <% end %>
         <%= link_to d_exhib.url, "http://#{d_exhib.url}" %>
       </div>
-    </div>
   <% end %>
 <% end %>
