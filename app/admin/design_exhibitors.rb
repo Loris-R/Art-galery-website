@@ -15,7 +15,7 @@ ActiveAdmin.register DesignExhibitor do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :design_id, :artist_name, :description_en, :description_fr, :url, photos: []
+  permit_params :design_id, :artist_name, :description_en, :description_fr, :url, :photo
   #
   # or
   #
@@ -32,8 +32,8 @@ ActiveAdmin.register DesignExhibitor do
       f.input :description_en
       f.input :description_fr
       f.input :url
-      f.inputs "Ajoutez des photos" do
-        f.input :photos, as: :file, input_html: { multiple: true }
+      f.inputs "Ajoutez une photo" do
+        f.input :photo, as: :file
       end
     end
     f.actions

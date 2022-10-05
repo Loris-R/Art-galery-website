@@ -45,9 +45,9 @@
   background-color: #f4f4f4;
 }
 
-.pics_divs {
-  width: 300px;
-  object-fit: contain;
+.exhibitor-image {
+  display: flex;
+  justify-content: center;
 }
 
 .middle_coming {
