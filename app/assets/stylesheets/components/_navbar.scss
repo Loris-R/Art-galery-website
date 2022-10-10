@@ -1,41 +1,51 @@
 ul {
   list-style: none;
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
   margin: 0;
-  padding: 4px 1.5vw;
-}
-
-.navbar_down {
-  justify-content: space-around;
 }
 
 a {
   color: inherit;
 }
 
-a:link, .link:link {
+.link:link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-a:visited,
 .link:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-a:hover,
 .link:hover {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-a:active,
 .link:active {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.color-b:link {
+  text-decoration: none;
+  color: #FC46AA;
+}
+
+.color-b:visited {
+  text-decoration: none;
+  color: #FC46AA;
+}
+
+.color-b:hover {
+  text-decoration: none;
+  color: #FC46AA;
+}
+
+.color-b:active {
+  text-decoration: none;
+  color: #FC46AA;
 }
 
 .main-nav {
@@ -55,92 +65,114 @@ a:active,
   font-size: 13px;
 }
 
-#nav_computer {
-  display: block;
-}
-
-#nav_tel {
-  display: none;
-}
-
 .navbar-nav {
   border-bottom: 1px solid black;
 }
 
+.nav_height {
+  height: 2.5rem;
+}
+
+#nav_tel {
+  background-color: #f4f4f4;
+}
+
+li, .column {
+  line-height: 2.4rem;
+}
+
+ul {
+  padding: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotate {
+  transition: transform 0.5s;
+  transform: rotate(90deg);
+}
+
+.align_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px;
+}
+
+.slide {
+  clear:both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+.list_menu_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar_down {
+  position: fixed;
+  display: flex;
+  top: 4rem;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: solid 1px black;
+  background-color: #FC46AA;
+}
+
+.stick_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  z-index: 30;
+}
+
+.navbar-nav {
+  background-color: #f4f4f4;
+}
+
+.fa-solid {
+  height: 27px;
+  width: 27px;
+  font-size: 2em;
+  font-weight: 600;
+  color: #FC46AA;
+}
+
+.crosby {
+  height: 105px;
+  border: 1px solid #FC46AA;
+  border-radius: 76px;
+  margin-top: 11px;
+  width: 13em;
+}
+
 @media only screen and (min-width:279px) and (max-width:766px) {
-  #nav_computer {
-    display: none;
-  }
-
-  .nav_height {
-    height: 2.5rem;
-  }
-
-  #nav_tel {
-    display: block;
-    background-color: #f4f4f4;
-  }
-
-  li, .column {
-    line-height: 2.4rem;
-  }
-
-  ul {
-    padding: 0;
-  }
-
-  .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .rotate {
-    transition: transform 0.5s;
-    transform: rotate(90deg);
-  }
-
   .fa-solid {
     height: 21px;
     width: 19px;
+    font-size: 1.4em;
+    font-weight: 900;
   }
 
   .align_icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 13px;
   }
 
-  .slide {
-    clear:both;
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-    text-align: center;
-    transition: height .4s ease;
-  }
-
-  .list_menu_column {
-    display: flex;
-    flex-direction: column;
-  }
-
   .navbar_down {
-    position: fixed;
     top: 3rem;
-    width: 100%;
   }
 
-  .stick_nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #f4f4f4;
-    z-index: 30;
-  }
-
-  .navbar-nav {
-    background-color: #f4f4f4;
+  .crosby {
+    height: 91px;
+    width: auto;
   }
 }

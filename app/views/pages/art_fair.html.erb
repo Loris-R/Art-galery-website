@@ -1,6 +1,6 @@
 <div class="all_art">
    <%= render "shared/navbar" %>
-   <section class="about_art">
+   <section class="about_art pro">
     <% if params[:locale] == "en" || params[:locale].nil? %>
       <div class="descript">
         <%= simple_format(@art_fair.description_en) %>

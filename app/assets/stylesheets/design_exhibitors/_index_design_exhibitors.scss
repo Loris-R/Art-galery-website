@@ -42,7 +42,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #FC46AA;
+}
+
+.hover:hover {
+  color:white;
+  text-decoration: none;
 }
 
 .exhibitor-image {
@@ -112,7 +117,7 @@
   }
 
   .artist-1 {
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
 }
 

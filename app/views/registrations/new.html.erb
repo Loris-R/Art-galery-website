@@ -1,11 +1,11 @@
 <div class="registration_top">
-  <%= link_to "< BACK", "javascript:history.back()" %>
+  <%= link_to "< BACK", "javascript:history.back()",class:"color-w underlin hover" %>
   <h1 class="registration_title"> <%= t("pages.registration.page_title") %> </h1>
   <div class="invisible_div"></div>
 </div>
 <div class="in_the_middle">
 <div class="gif">
-<div style="height: 100%" class="comp_gif">
+<div class="comp_gif">
   <%= form_with model: @registration, method: :post, class: "registration-form" do |reg_form| %>
     <div class="registration-group group_one">
       <%= reg_form.label t("pages.registration.title"), class: "underline" %>

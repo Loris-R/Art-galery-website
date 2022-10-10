@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1.7rem;
 }
 
 .coordinates {
@@ -55,7 +56,6 @@
 @media only screen and (min-width:361px) and (max-width: 1260px) {
   .down_border_tel {
     border-bottom: 1px solid black;
-    background-color: #f4f4f4;
   }
 
   .coordinates {
@@ -63,12 +63,12 @@
   }
 
   .about_art {
-    margin-top: 4rem;
+    margin-top: 4.6rem;
     height: unset;
   }
 
   .tab_pro {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .coordinates-design {
