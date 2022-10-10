@@ -100,7 +100,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  margin: 18px;
 }
 
 .slide {
@@ -120,7 +120,7 @@ ul {
 .navbar_down {
   position: fixed;
   display: flex;
-  top: 4.8rem;
+  top: 4rem;
   width: 100%;
   justify-content: space-around;
   border-bottom: solid 1px black;
@@ -147,6 +147,14 @@ ul {
   color: #FC46AA;
 }
 
+.crosby {
+  height: 105px;
+  border: 1px solid #FC46AA;
+  border-radius: 76px;
+  margin-top: 11px;
+  width: 13em;
+}
+
 @media only screen and (min-width:279px) and (max-width:766px) {
   .fa-solid {
     height: 21px;
@@ -161,5 +169,10 @@ ul {
 
   .navbar_down {
     top: 3rem;
+  }
+
+  .crosby {
+    height: 91px;
+    width: auto;
   }
 }
