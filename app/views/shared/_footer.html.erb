@@ -1,4 +1,4 @@
-<footer class="footer <%= "col-w" if current_page?(root_path)%>">
+<footer class="footer <%= "col-w" if current_page?(root_path)%> <%="no-border" if current_page?(new_registration_path)%>">
   <div class="<%="color-w" unless current_page?(root_path)%>">
     <%= link_to "ENG", root_path(locale: "en"), class:"underlin" %>
   </div>

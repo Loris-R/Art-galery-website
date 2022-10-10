@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .gif {
@@ -112,6 +113,12 @@
   .group_one {
     display: unset;
     line-height: 37px;
+  }
+
+  .in_the_middle {
+    height: 166%;
+    display: unset;
+    width: 100%;
   }
 
 }
