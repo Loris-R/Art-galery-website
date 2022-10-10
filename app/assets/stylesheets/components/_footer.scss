@@ -1,4 +1,4 @@
-#footer {
+.footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,12 +6,28 @@
   padding: 6px 17px;
   position: sticky;
   bottom: 0;
-  background-color: #F4F4F4;
+  background-color: #FC46AA;
   z-index: 20;
 }
 
+.underlin {
+  text-decoration: none;
+}
+
+.col-w {
+  background-color: #F4F4F4;
+}
+
+.fill-w {
+  fill: white;
+}
+
+.color-w {
+  color: white;
+}
+
 @media only screen and (min-width:279px) and (max-width:766px) {
-  #footer {
+  .footer {
     padding: 6px;
     font-size: 14px;
   }
@@ -19,8 +35,5 @@
   .smaller {
     height: 14px;
   }
-
-
-
 
 }

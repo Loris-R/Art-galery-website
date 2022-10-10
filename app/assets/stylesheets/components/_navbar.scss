@@ -4,35 +4,48 @@ ul {
   margin: 0;
 }
 
-.navbar_down {
-  justify-content: space-around;
-}
-
 a {
   color: inherit;
 }
 
-a:link, .link:link {
+.link:link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-a:visited,
 .link:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-a:hover,
 .link:hover {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-a:active,
 .link:active {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.color-b:link {
+  text-decoration: none;
+  color: #FC46AA;
+}
+
+.color-b:visited {
+  text-decoration: none;
+  color: #FC46AA;
+}
+
+.color-b:hover {
+  text-decoration: none;
+  color: #FC46AA;
+}
+
+.color-b:active {
+  text-decoration: none;
+  color: #FC46AA;
 }
 
 .main-nav {
@@ -59,34 +72,37 @@ a:active,
 .nav_height {
   height: 2.5rem;
 }
+
 #nav_tel {
   background-color: #f4f4f4;
 }
+
 li, .column {
   line-height: 2.4rem;
 }
+
 ul {
   padding: 0;
 }
+
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .rotate {
   transition: transform 0.5s;
   transform: rotate(90deg);
 }
-.fa-solid {
-  height: 21px;
-  width: 19px;
-}
+
 .align_icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 13px;
+  margin: 25px;
 }
+
 .slide {
   clear:both;
   width: 100%;
@@ -95,16 +111,22 @@ ul {
   text-align: center;
   transition: height .4s ease;
 }
+
 .list_menu_column {
   display: flex;
   flex-direction: column;
 }
+
 .navbar_down {
   position: fixed;
   display: flex;
-  top: 3rem;
+  top: 4.8rem;
   width: 100%;
+  justify-content: space-around;
+  border-bottom: solid 1px black;
+  background-color: #FC46AA;
 }
+
 .stick_nav {
   position: fixed;
   top: 0;
@@ -112,6 +134,32 @@ ul {
   background-color: #f4f4f4;
   z-index: 30;
 }
+
 .navbar-nav {
   background-color: #f4f4f4;
+}
+
+.fa-solid {
+  height: 27px;
+  width: 27px;
+  font-size: 2em;
+  font-weight: 600;
+  color: #FC46AA;
+}
+
+@media only screen and (min-width:279px) and (max-width:766px) {
+  .fa-solid {
+    height: 21px;
+    width: 19px;
+    font-size: 1.4em;
+    font-weight: 900;
+  }
+
+  .align_icon {
+    margin: 13px;
+  }
+
+  .navbar_down {
+    top: 3rem;
+  }
 }

@@ -1,48 +1,40 @@
 <div data-controller="navbar" id="header">
-      <% if false %>
-        <% unless current_page?(root_path) %>
-          <li data-navbar-target="back">
-            <%= link_to "< BACK", "javascript:history.back()" %>
-          </li>
-        <% end %>
-      <% end %>
-
   <div class="header nav_height" id="nav_tel">
     <ul class="navbar-nav .main-nav <%= "stick_nav" unless current_page? (root_path) %>">
       <li class="align_icon">
-        <i data-navbar-target="cross" class="fa-solid fa-plus" style="font-size: 1.4em;"></i>
+        <i data-navbar-target="cross" class="fa-solid fa-plus"></i>
       </li>
         <div class="column slide" data-navbar-target="aboutdown">
           <ul class="list_menu_column">
             <li>
               <% unless current_page?(root_path) %>
-                <%= link_to t("navbar.about"), root_path + href="#about_link", class: "link" %>
+                <%= link_to t("navbar.about"), root_path + href="#about_link", class: "link color-b" %>
               <% else %>
-                <a href="#about_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">ABOUT</a>
+                <a href="#about_link" class="link color-b" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="300">ABOUT</a>
               <% end %>
             </li>
             <li>
               <% unless current_page?(root_path) %>
-                <%= link_to t("navbar.partner"), root_path + href="#partners_link", class: "link" %>
+                <%= link_to t("navbar.partner"), root_path + href="#partners_link", class: "link color-b" %>
               <% else %>
-                 <a href="#partners_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="73">PARTNERS</a>
+                 <a href="#partners_link" class="link color-b"  data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="73">PARTNERS</a>
               <% end %>
             </li>
             <li>
-              <%= link_to 'Bienvenue Art Fair', art_fair_path, class:"link" %>
+              <%= link_to 'Bienvenue Art Fair', art_fair_path, class:"link color-b" %>
             </li>
             <li>
-              <%= link_to 'Bienvenue Design', design_path, class:"link" %>
+              <%= link_to 'Bienvenue Design', design_path, class:"link color-b" %>
             </li>
             <li>
               <% unless current_page?(root_path) %>
-                <%= link_to "CONTACT", root_path + href="#contact_link", class: "link" %>
+                <%= link_to "CONTACT", root_path + href="#contact_link", class: "link color-b" %>
               <% else %>
-                <a href="#contact_link" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">CONTACT<a>
+                <a href="#contact_link" class="link color-b" data-action="click->navbar#link" data-controller="scroll-to" data-scroll-to-offset-value="0">CONTACT<a>
               <% end %>
             </li>
             <li>
-              <%= link_to t("navbar.registration"), new_registration_path, class:"link" %>
+              <%= link_to t("navbar.registration"), new_registration_path, class:"link color-b" %>
             </li>
           </ul>
         </div>
