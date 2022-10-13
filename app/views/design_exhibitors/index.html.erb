@@ -11,7 +11,6 @@
     <p class="come">COMING SOON</p>
   </div>
 <% else %>
-  <%  @design_exhibitors.sort_by { |h| h[:artist_name] }  %>
   <% @design_exhibitors.each do |d_exhib| %>
       <div class="artist_name">
         <%= simple_format(d_exhib.artist_name, class: ("artist-1" if d_exhib == @design_exhibitors.first)) %>
