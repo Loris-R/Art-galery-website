@@ -10,16 +10,16 @@ Design.destroy_all if Rails.env.development?
 puts "destroyed datas if development environment"
 
 #create users
-User.create!(
-  email: "loris.reynaud@gmail.com", password: "azerty!5", admin: true
-)
-User.create!(
-  email: "fonsecarika@gmail.com", password: "1234567890!5", admin: true
-)
-User.create!(
-  email: "olivier@bienvenue.art", password: "Olivier?75", admin: true
-)
-puts "Olivier, Lolo & Rika created !"
+# User.create!(
+#   email: "loris.reynaud@gmail.com", password: "azerty!5", admin: true
+# )
+# User.create!(
+#   email: "fonsecarika@gmail.com", password: "1234567890!5", admin: true
+# )
+# User.create!(
+#   email: "olivier@bienvenue.art", password: "Olivier?75", admin: true
+# )
+# puts "Olivier, Lolo & Rika created !"
 
 #create Partner
 
